@@ -1,0 +1,3 @@
+/Users/yuvalkasner/Documents/c++ projects/simulatorProject/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/yuvalkasner/Documents/c++ projects/simulatorProject/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/yuvalkasner/Documents/c++ projects/simulatorProject/cmake-build-debug/CMakeFiles/simulatorProject.dir
