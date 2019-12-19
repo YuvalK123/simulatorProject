@@ -82,7 +82,7 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/yuvalkasner/Documents/c++ projects/simulatorProject/main.cpp">
+		<Unit filename="/Users/yuvalkasner/Documents/c++ projects/simulatorProject/server.cpp">
 			<Option target="simulatorProject"/>
 		</Unit>
 		<Unit filename="/Users/yuvalkasner/Documents/c++ projects/simulatorProject/CMakeLists.txt">
