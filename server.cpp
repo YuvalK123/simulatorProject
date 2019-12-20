@@ -70,7 +70,11 @@ int main(int argc, char const *argv[]) {
         break;
       }
       //disp msg
-      cout<<"recieved"<<string(buff,0,byteRecv)<<endl;
+      cout<<"recieved "<<string(buff,0,byteRecv)<<endl;
+      if(strcmp(buff,"quit") == 0){
+        close(clientSocket);
+        return 0;
+      }
       //resend msg
       send(clientSocket,buff,byteRecv+1,0);
     }
