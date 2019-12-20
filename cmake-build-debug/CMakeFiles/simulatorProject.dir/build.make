@@ -57,27 +57,27 @@ include CMakeFiles/simulatorProject.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/simulatorProject.dir/flags.make
 
-CMakeFiles/simulatorProject.dir/main.cpp.o: CMakeFiles/simulatorProject.dir/flags.make
-CMakeFiles/simulatorProject.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/yuvalkasner/Documents/c++ projects/simulatorProject/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/simulatorProject.dir/main.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/simulatorProject.dir/main.cpp.o -c "/Users/yuvalkasner/Documents/c++ projects/simulatorProject/main.cpp"
+CMakeFiles/simulatorProject.dir/server.cpp.o: CMakeFiles/simulatorProject.dir/flags.make
+CMakeFiles/simulatorProject.dir/server.cpp.o: ../server.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/yuvalkasner/Documents/c++ projects/simulatorProject/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/simulatorProject.dir/server.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/simulatorProject.dir/server.cpp.o -c "/Users/yuvalkasner/Documents/c++ projects/simulatorProject/server.cpp"
 
-CMakeFiles/simulatorProject.dir/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/simulatorProject.dir/main.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/yuvalkasner/Documents/c++ projects/simulatorProject/main.cpp" > CMakeFiles/simulatorProject.dir/main.cpp.i
+CMakeFiles/simulatorProject.dir/server.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/simulatorProject.dir/server.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/yuvalkasner/Documents/c++ projects/simulatorProject/server.cpp" > CMakeFiles/simulatorProject.dir/server.cpp.i
 
-CMakeFiles/simulatorProject.dir/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/simulatorProject.dir/main.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/yuvalkasner/Documents/c++ projects/simulatorProject/main.cpp" -o CMakeFiles/simulatorProject.dir/main.cpp.s
+CMakeFiles/simulatorProject.dir/server.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/simulatorProject.dir/server.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/yuvalkasner/Documents/c++ projects/simulatorProject/server.cpp" -o CMakeFiles/simulatorProject.dir/server.cpp.s
 
 # Object files for target simulatorProject
 simulatorProject_OBJECTS = \
-"CMakeFiles/simulatorProject.dir/main.cpp.o"
+"CMakeFiles/simulatorProject.dir/server.cpp.o"
 
 # External object files for target simulatorProject
 simulatorProject_EXTERNAL_OBJECTS =
 
-simulatorProject: CMakeFiles/simulatorProject.dir/main.cpp.o
+simulatorProject: CMakeFiles/simulatorProject.dir/server.cpp.o
 simulatorProject: CMakeFiles/simulatorProject.dir/build.make
 simulatorProject: CMakeFiles/simulatorProject.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/Users/yuvalkasner/Documents/c++ projects/simulatorProject/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable simulatorProject"
