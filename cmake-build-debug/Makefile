@@ -123,6 +123,222 @@ simulatorProject/fast:
 	$(MAKE) -f CMakeFiles/simulatorProject.dir/build.make CMakeFiles/simulatorProject.dir/build
 .PHONY : simulatorProject/fast
 
+SymbolTable.o: SymbolTable.cpp.o
+
+.PHONY : SymbolTable.o
+
+# target to build an object file
+SymbolTable.cpp.o:
+	$(MAKE) -f CMakeFiles/simulatorProject.dir/build.make CMakeFiles/simulatorProject.dir/SymbolTable.cpp.o
+.PHONY : SymbolTable.cpp.o
+
+SymbolTable.i: SymbolTable.cpp.i
+
+.PHONY : SymbolTable.i
+
+# target to preprocess a source file
+SymbolTable.cpp.i:
+	$(MAKE) -f CMakeFiles/simulatorProject.dir/build.make CMakeFiles/simulatorProject.dir/SymbolTable.cpp.i
+.PHONY : SymbolTable.cpp.i
+
+SymbolTable.s: SymbolTable.cpp.s
+
+.PHONY : SymbolTable.s
+
+# target to generate assembly for a file
+SymbolTable.cpp.s:
+	$(MAKE) -f CMakeFiles/simulatorProject.dir/build.make CMakeFiles/simulatorProject.dir/SymbolTable.cpp.s
+.PHONY : SymbolTable.cpp.s
+
+commands/ConnectCommand.o: commands/ConnectCommand.cpp.o
+
+.PHONY : commands/ConnectCommand.o
+
+# target to build an object file
+commands/ConnectCommand.cpp.o:
+	$(MAKE) -f CMakeFiles/simulatorProject.dir/build.make CMakeFiles/simulatorProject.dir/commands/ConnectCommand.cpp.o
+.PHONY : commands/ConnectCommand.cpp.o
+
+commands/ConnectCommand.i: commands/ConnectCommand.cpp.i
+
+.PHONY : commands/ConnectCommand.i
+
+# target to preprocess a source file
+commands/ConnectCommand.cpp.i:
+	$(MAKE) -f CMakeFiles/simulatorProject.dir/build.make CMakeFiles/simulatorProject.dir/commands/ConnectCommand.cpp.i
+.PHONY : commands/ConnectCommand.cpp.i
+
+commands/ConnectCommand.s: commands/ConnectCommand.cpp.s
+
+.PHONY : commands/ConnectCommand.s
+
+# target to generate assembly for a file
+commands/ConnectCommand.cpp.s:
+	$(MAKE) -f CMakeFiles/simulatorProject.dir/build.make CMakeFiles/simulatorProject.dir/commands/ConnectCommand.cpp.s
+.PHONY : commands/ConnectCommand.cpp.s
+
+commands/DefineVarCommand.o: commands/DefineVarCommand.cpp.o
+
+.PHONY : commands/DefineVarCommand.o
+
+# target to build an object file
+commands/DefineVarCommand.cpp.o:
+	$(MAKE) -f CMakeFiles/simulatorProject.dir/build.make CMakeFiles/simulatorProject.dir/commands/DefineVarCommand.cpp.o
+.PHONY : commands/DefineVarCommand.cpp.o
+
+commands/DefineVarCommand.i: commands/DefineVarCommand.cpp.i
+
+.PHONY : commands/DefineVarCommand.i
+
+# target to preprocess a source file
+commands/DefineVarCommand.cpp.i:
+	$(MAKE) -f CMakeFiles/simulatorProject.dir/build.make CMakeFiles/simulatorProject.dir/commands/DefineVarCommand.cpp.i
+.PHONY : commands/DefineVarCommand.cpp.i
+
+commands/DefineVarCommand.s: commands/DefineVarCommand.cpp.s
+
+.PHONY : commands/DefineVarCommand.s
+
+# target to generate assembly for a file
+commands/DefineVarCommand.cpp.s:
+	$(MAKE) -f CMakeFiles/simulatorProject.dir/build.make CMakeFiles/simulatorProject.dir/commands/DefineVarCommand.cpp.s
+.PHONY : commands/DefineVarCommand.cpp.s
+
+commands/ForLoop.o: commands/ForLoop.cpp.o
+
+.PHONY : commands/ForLoop.o
+
+# target to build an object file
+commands/ForLoop.cpp.o:
+	$(MAKE) -f CMakeFiles/simulatorProject.dir/build.make CMakeFiles/simulatorProject.dir/commands/ForLoop.cpp.o
+.PHONY : commands/ForLoop.cpp.o
+
+commands/ForLoop.i: commands/ForLoop.cpp.i
+
+.PHONY : commands/ForLoop.i
+
+# target to preprocess a source file
+commands/ForLoop.cpp.i:
+	$(MAKE) -f CMakeFiles/simulatorProject.dir/build.make CMakeFiles/simulatorProject.dir/commands/ForLoop.cpp.i
+.PHONY : commands/ForLoop.cpp.i
+
+commands/ForLoop.s: commands/ForLoop.cpp.s
+
+.PHONY : commands/ForLoop.s
+
+# target to generate assembly for a file
+commands/ForLoop.cpp.s:
+	$(MAKE) -f CMakeFiles/simulatorProject.dir/build.make CMakeFiles/simulatorProject.dir/commands/ForLoop.cpp.s
+.PHONY : commands/ForLoop.cpp.s
+
+commands/FuncCommand.o: commands/FuncCommand.cpp.o
+
+.PHONY : commands/FuncCommand.o
+
+# target to build an object file
+commands/FuncCommand.cpp.o:
+	$(MAKE) -f CMakeFiles/simulatorProject.dir/build.make CMakeFiles/simulatorProject.dir/commands/FuncCommand.cpp.o
+.PHONY : commands/FuncCommand.cpp.o
+
+commands/FuncCommand.i: commands/FuncCommand.cpp.i
+
+.PHONY : commands/FuncCommand.i
+
+# target to preprocess a source file
+commands/FuncCommand.cpp.i:
+	$(MAKE) -f CMakeFiles/simulatorProject.dir/build.make CMakeFiles/simulatorProject.dir/commands/FuncCommand.cpp.i
+.PHONY : commands/FuncCommand.cpp.i
+
+commands/FuncCommand.s: commands/FuncCommand.cpp.s
+
+.PHONY : commands/FuncCommand.s
+
+# target to generate assembly for a file
+commands/FuncCommand.cpp.s:
+	$(MAKE) -f CMakeFiles/simulatorProject.dir/build.make CMakeFiles/simulatorProject.dir/commands/FuncCommand.cpp.s
+.PHONY : commands/FuncCommand.cpp.s
+
+commands/IfCommand.o: commands/IfCommand.cpp.o
+
+.PHONY : commands/IfCommand.o
+
+# target to build an object file
+commands/IfCommand.cpp.o:
+	$(MAKE) -f CMakeFiles/simulatorProject.dir/build.make CMakeFiles/simulatorProject.dir/commands/IfCommand.cpp.o
+.PHONY : commands/IfCommand.cpp.o
+
+commands/IfCommand.i: commands/IfCommand.cpp.i
+
+.PHONY : commands/IfCommand.i
+
+# target to preprocess a source file
+commands/IfCommand.cpp.i:
+	$(MAKE) -f CMakeFiles/simulatorProject.dir/build.make CMakeFiles/simulatorProject.dir/commands/IfCommand.cpp.i
+.PHONY : commands/IfCommand.cpp.i
+
+commands/IfCommand.s: commands/IfCommand.cpp.s
+
+.PHONY : commands/IfCommand.s
+
+# target to generate assembly for a file
+commands/IfCommand.cpp.s:
+	$(MAKE) -f CMakeFiles/simulatorProject.dir/build.make CMakeFiles/simulatorProject.dir/commands/IfCommand.cpp.s
+.PHONY : commands/IfCommand.cpp.s
+
+commands/LoopCommand.o: commands/LoopCommand.cpp.o
+
+.PHONY : commands/LoopCommand.o
+
+# target to build an object file
+commands/LoopCommand.cpp.o:
+	$(MAKE) -f CMakeFiles/simulatorProject.dir/build.make CMakeFiles/simulatorProject.dir/commands/LoopCommand.cpp.o
+.PHONY : commands/LoopCommand.cpp.o
+
+commands/LoopCommand.i: commands/LoopCommand.cpp.i
+
+.PHONY : commands/LoopCommand.i
+
+# target to preprocess a source file
+commands/LoopCommand.cpp.i:
+	$(MAKE) -f CMakeFiles/simulatorProject.dir/build.make CMakeFiles/simulatorProject.dir/commands/LoopCommand.cpp.i
+.PHONY : commands/LoopCommand.cpp.i
+
+commands/LoopCommand.s: commands/LoopCommand.cpp.s
+
+.PHONY : commands/LoopCommand.s
+
+# target to generate assembly for a file
+commands/LoopCommand.cpp.s:
+	$(MAKE) -f CMakeFiles/simulatorProject.dir/build.make CMakeFiles/simulatorProject.dir/commands/LoopCommand.cpp.s
+.PHONY : commands/LoopCommand.cpp.s
+
+commands/OpenServerCommand.o: commands/OpenServerCommand.cpp.o
+
+.PHONY : commands/OpenServerCommand.o
+
+# target to build an object file
+commands/OpenServerCommand.cpp.o:
+	$(MAKE) -f CMakeFiles/simulatorProject.dir/build.make CMakeFiles/simulatorProject.dir/commands/OpenServerCommand.cpp.o
+.PHONY : commands/OpenServerCommand.cpp.o
+
+commands/OpenServerCommand.i: commands/OpenServerCommand.cpp.i
+
+.PHONY : commands/OpenServerCommand.i
+
+# target to preprocess a source file
+commands/OpenServerCommand.cpp.i:
+	$(MAKE) -f CMakeFiles/simulatorProject.dir/build.make CMakeFiles/simulatorProject.dir/commands/OpenServerCommand.cpp.i
+.PHONY : commands/OpenServerCommand.cpp.i
+
+commands/OpenServerCommand.s: commands/OpenServerCommand.cpp.s
+
+.PHONY : commands/OpenServerCommand.s
+
+# target to generate assembly for a file
+commands/OpenServerCommand.cpp.s:
+	$(MAKE) -f CMakeFiles/simulatorProject.dir/build.make CMakeFiles/simulatorProject.dir/commands/OpenServerCommand.cpp.s
+.PHONY : commands/OpenServerCommand.cpp.s
+
 server.o: server.cpp.o
 
 .PHONY : server.o
@@ -159,6 +375,30 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... simulatorProject"
+	@echo "... SymbolTable.o"
+	@echo "... SymbolTable.i"
+	@echo "... SymbolTable.s"
+	@echo "... commands/ConnectCommand.o"
+	@echo "... commands/ConnectCommand.i"
+	@echo "... commands/ConnectCommand.s"
+	@echo "... commands/DefineVarCommand.o"
+	@echo "... commands/DefineVarCommand.i"
+	@echo "... commands/DefineVarCommand.s"
+	@echo "... commands/ForLoop.o"
+	@echo "... commands/ForLoop.i"
+	@echo "... commands/ForLoop.s"
+	@echo "... commands/FuncCommand.o"
+	@echo "... commands/FuncCommand.i"
+	@echo "... commands/FuncCommand.s"
+	@echo "... commands/IfCommand.o"
+	@echo "... commands/IfCommand.i"
+	@echo "... commands/IfCommand.s"
+	@echo "... commands/LoopCommand.o"
+	@echo "... commands/LoopCommand.i"
+	@echo "... commands/LoopCommand.s"
+	@echo "... commands/OpenServerCommand.o"
+	@echo "... commands/OpenServerCommand.i"
+	@echo "... commands/OpenServerCommand.s"
 	@echo "... server.o"
 	@echo "... server.i"
 	@echo "... server.s"

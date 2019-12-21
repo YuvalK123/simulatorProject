@@ -70,17 +70,137 @@ CMakeFiles/simulatorProject.dir/server.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/simulatorProject.dir/server.cpp.s"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/yuvalkasner/Documents/c++ projects/simulatorProject/server.cpp" -o CMakeFiles/simulatorProject.dir/server.cpp.s
 
+CMakeFiles/simulatorProject.dir/commands/OpenServerCommand.cpp.o: CMakeFiles/simulatorProject.dir/flags.make
+CMakeFiles/simulatorProject.dir/commands/OpenServerCommand.cpp.o: ../commands/OpenServerCommand.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/yuvalkasner/Documents/c++ projects/simulatorProject/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/simulatorProject.dir/commands/OpenServerCommand.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/simulatorProject.dir/commands/OpenServerCommand.cpp.o -c "/Users/yuvalkasner/Documents/c++ projects/simulatorProject/commands/OpenServerCommand.cpp"
+
+CMakeFiles/simulatorProject.dir/commands/OpenServerCommand.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/simulatorProject.dir/commands/OpenServerCommand.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/yuvalkasner/Documents/c++ projects/simulatorProject/commands/OpenServerCommand.cpp" > CMakeFiles/simulatorProject.dir/commands/OpenServerCommand.cpp.i
+
+CMakeFiles/simulatorProject.dir/commands/OpenServerCommand.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/simulatorProject.dir/commands/OpenServerCommand.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/yuvalkasner/Documents/c++ projects/simulatorProject/commands/OpenServerCommand.cpp" -o CMakeFiles/simulatorProject.dir/commands/OpenServerCommand.cpp.s
+
+CMakeFiles/simulatorProject.dir/commands/ConnectCommand.cpp.o: CMakeFiles/simulatorProject.dir/flags.make
+CMakeFiles/simulatorProject.dir/commands/ConnectCommand.cpp.o: ../commands/ConnectCommand.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/yuvalkasner/Documents/c++ projects/simulatorProject/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/simulatorProject.dir/commands/ConnectCommand.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/simulatorProject.dir/commands/ConnectCommand.cpp.o -c "/Users/yuvalkasner/Documents/c++ projects/simulatorProject/commands/ConnectCommand.cpp"
+
+CMakeFiles/simulatorProject.dir/commands/ConnectCommand.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/simulatorProject.dir/commands/ConnectCommand.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/yuvalkasner/Documents/c++ projects/simulatorProject/commands/ConnectCommand.cpp" > CMakeFiles/simulatorProject.dir/commands/ConnectCommand.cpp.i
+
+CMakeFiles/simulatorProject.dir/commands/ConnectCommand.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/simulatorProject.dir/commands/ConnectCommand.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/yuvalkasner/Documents/c++ projects/simulatorProject/commands/ConnectCommand.cpp" -o CMakeFiles/simulatorProject.dir/commands/ConnectCommand.cpp.s
+
+CMakeFiles/simulatorProject.dir/commands/DefineVarCommand.cpp.o: CMakeFiles/simulatorProject.dir/flags.make
+CMakeFiles/simulatorProject.dir/commands/DefineVarCommand.cpp.o: ../commands/DefineVarCommand.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/yuvalkasner/Documents/c++ projects/simulatorProject/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/simulatorProject.dir/commands/DefineVarCommand.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/simulatorProject.dir/commands/DefineVarCommand.cpp.o -c "/Users/yuvalkasner/Documents/c++ projects/simulatorProject/commands/DefineVarCommand.cpp"
+
+CMakeFiles/simulatorProject.dir/commands/DefineVarCommand.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/simulatorProject.dir/commands/DefineVarCommand.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/yuvalkasner/Documents/c++ projects/simulatorProject/commands/DefineVarCommand.cpp" > CMakeFiles/simulatorProject.dir/commands/DefineVarCommand.cpp.i
+
+CMakeFiles/simulatorProject.dir/commands/DefineVarCommand.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/simulatorProject.dir/commands/DefineVarCommand.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/yuvalkasner/Documents/c++ projects/simulatorProject/commands/DefineVarCommand.cpp" -o CMakeFiles/simulatorProject.dir/commands/DefineVarCommand.cpp.s
+
+CMakeFiles/simulatorProject.dir/commands/IfCommand.cpp.o: CMakeFiles/simulatorProject.dir/flags.make
+CMakeFiles/simulatorProject.dir/commands/IfCommand.cpp.o: ../commands/IfCommand.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/yuvalkasner/Documents/c++ projects/simulatorProject/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/simulatorProject.dir/commands/IfCommand.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/simulatorProject.dir/commands/IfCommand.cpp.o -c "/Users/yuvalkasner/Documents/c++ projects/simulatorProject/commands/IfCommand.cpp"
+
+CMakeFiles/simulatorProject.dir/commands/IfCommand.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/simulatorProject.dir/commands/IfCommand.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/yuvalkasner/Documents/c++ projects/simulatorProject/commands/IfCommand.cpp" > CMakeFiles/simulatorProject.dir/commands/IfCommand.cpp.i
+
+CMakeFiles/simulatorProject.dir/commands/IfCommand.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/simulatorProject.dir/commands/IfCommand.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/yuvalkasner/Documents/c++ projects/simulatorProject/commands/IfCommand.cpp" -o CMakeFiles/simulatorProject.dir/commands/IfCommand.cpp.s
+
+CMakeFiles/simulatorProject.dir/commands/LoopCommand.cpp.o: CMakeFiles/simulatorProject.dir/flags.make
+CMakeFiles/simulatorProject.dir/commands/LoopCommand.cpp.o: ../commands/LoopCommand.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/yuvalkasner/Documents/c++ projects/simulatorProject/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/simulatorProject.dir/commands/LoopCommand.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/simulatorProject.dir/commands/LoopCommand.cpp.o -c "/Users/yuvalkasner/Documents/c++ projects/simulatorProject/commands/LoopCommand.cpp"
+
+CMakeFiles/simulatorProject.dir/commands/LoopCommand.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/simulatorProject.dir/commands/LoopCommand.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/yuvalkasner/Documents/c++ projects/simulatorProject/commands/LoopCommand.cpp" > CMakeFiles/simulatorProject.dir/commands/LoopCommand.cpp.i
+
+CMakeFiles/simulatorProject.dir/commands/LoopCommand.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/simulatorProject.dir/commands/LoopCommand.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/yuvalkasner/Documents/c++ projects/simulatorProject/commands/LoopCommand.cpp" -o CMakeFiles/simulatorProject.dir/commands/LoopCommand.cpp.s
+
+CMakeFiles/simulatorProject.dir/commands/FuncCommand.cpp.o: CMakeFiles/simulatorProject.dir/flags.make
+CMakeFiles/simulatorProject.dir/commands/FuncCommand.cpp.o: ../commands/FuncCommand.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/yuvalkasner/Documents/c++ projects/simulatorProject/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/simulatorProject.dir/commands/FuncCommand.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/simulatorProject.dir/commands/FuncCommand.cpp.o -c "/Users/yuvalkasner/Documents/c++ projects/simulatorProject/commands/FuncCommand.cpp"
+
+CMakeFiles/simulatorProject.dir/commands/FuncCommand.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/simulatorProject.dir/commands/FuncCommand.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/yuvalkasner/Documents/c++ projects/simulatorProject/commands/FuncCommand.cpp" > CMakeFiles/simulatorProject.dir/commands/FuncCommand.cpp.i
+
+CMakeFiles/simulatorProject.dir/commands/FuncCommand.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/simulatorProject.dir/commands/FuncCommand.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/yuvalkasner/Documents/c++ projects/simulatorProject/commands/FuncCommand.cpp" -o CMakeFiles/simulatorProject.dir/commands/FuncCommand.cpp.s
+
+CMakeFiles/simulatorProject.dir/commands/ForLoop.cpp.o: CMakeFiles/simulatorProject.dir/flags.make
+CMakeFiles/simulatorProject.dir/commands/ForLoop.cpp.o: ../commands/ForLoop.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/yuvalkasner/Documents/c++ projects/simulatorProject/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/simulatorProject.dir/commands/ForLoop.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/simulatorProject.dir/commands/ForLoop.cpp.o -c "/Users/yuvalkasner/Documents/c++ projects/simulatorProject/commands/ForLoop.cpp"
+
+CMakeFiles/simulatorProject.dir/commands/ForLoop.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/simulatorProject.dir/commands/ForLoop.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/yuvalkasner/Documents/c++ projects/simulatorProject/commands/ForLoop.cpp" > CMakeFiles/simulatorProject.dir/commands/ForLoop.cpp.i
+
+CMakeFiles/simulatorProject.dir/commands/ForLoop.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/simulatorProject.dir/commands/ForLoop.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/yuvalkasner/Documents/c++ projects/simulatorProject/commands/ForLoop.cpp" -o CMakeFiles/simulatorProject.dir/commands/ForLoop.cpp.s
+
+CMakeFiles/simulatorProject.dir/SymbolTable.cpp.o: CMakeFiles/simulatorProject.dir/flags.make
+CMakeFiles/simulatorProject.dir/SymbolTable.cpp.o: ../SymbolTable.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/Users/yuvalkasner/Documents/c++ projects/simulatorProject/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/simulatorProject.dir/SymbolTable.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/simulatorProject.dir/SymbolTable.cpp.o -c "/Users/yuvalkasner/Documents/c++ projects/simulatorProject/SymbolTable.cpp"
+
+CMakeFiles/simulatorProject.dir/SymbolTable.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/simulatorProject.dir/SymbolTable.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/Users/yuvalkasner/Documents/c++ projects/simulatorProject/SymbolTable.cpp" > CMakeFiles/simulatorProject.dir/SymbolTable.cpp.i
+
+CMakeFiles/simulatorProject.dir/SymbolTable.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/simulatorProject.dir/SymbolTable.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/Users/yuvalkasner/Documents/c++ projects/simulatorProject/SymbolTable.cpp" -o CMakeFiles/simulatorProject.dir/SymbolTable.cpp.s
+
 # Object files for target simulatorProject
 simulatorProject_OBJECTS = \
-"CMakeFiles/simulatorProject.dir/server.cpp.o"
+"CMakeFiles/simulatorProject.dir/server.cpp.o" \
+"CMakeFiles/simulatorProject.dir/commands/OpenServerCommand.cpp.o" \
+"CMakeFiles/simulatorProject.dir/commands/ConnectCommand.cpp.o" \
+"CMakeFiles/simulatorProject.dir/commands/DefineVarCommand.cpp.o" \
+"CMakeFiles/simulatorProject.dir/commands/IfCommand.cpp.o" \
+"CMakeFiles/simulatorProject.dir/commands/LoopCommand.cpp.o" \
+"CMakeFiles/simulatorProject.dir/commands/FuncCommand.cpp.o" \
+"CMakeFiles/simulatorProject.dir/commands/ForLoop.cpp.o" \
+"CMakeFiles/simulatorProject.dir/SymbolTable.cpp.o"
 
 # External object files for target simulatorProject
 simulatorProject_EXTERNAL_OBJECTS =
 
 simulatorProject: CMakeFiles/simulatorProject.dir/server.cpp.o
+simulatorProject: CMakeFiles/simulatorProject.dir/commands/OpenServerCommand.cpp.o
+simulatorProject: CMakeFiles/simulatorProject.dir/commands/ConnectCommand.cpp.o
+simulatorProject: CMakeFiles/simulatorProject.dir/commands/DefineVarCommand.cpp.o
+simulatorProject: CMakeFiles/simulatorProject.dir/commands/IfCommand.cpp.o
+simulatorProject: CMakeFiles/simulatorProject.dir/commands/LoopCommand.cpp.o
+simulatorProject: CMakeFiles/simulatorProject.dir/commands/FuncCommand.cpp.o
+simulatorProject: CMakeFiles/simulatorProject.dir/commands/ForLoop.cpp.o
+simulatorProject: CMakeFiles/simulatorProject.dir/SymbolTable.cpp.o
 simulatorProject: CMakeFiles/simulatorProject.dir/build.make
 simulatorProject: CMakeFiles/simulatorProject.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/Users/yuvalkasner/Documents/c++ projects/simulatorProject/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable simulatorProject"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/Users/yuvalkasner/Documents/c++ projects/simulatorProject/cmake-build-debug/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable simulatorProject"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/simulatorProject.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

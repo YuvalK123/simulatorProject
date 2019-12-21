@@ -82,6 +82,42 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/yuvalkasner/Documents/c++ projects/simulatorProject/LRU.h">
+			<Option target="simulatorProject"/>
+		</Unit>
+		<Unit filename="/Users/yuvalkasner/Documents/c++ projects/simulatorProject/SymbolTable.cpp">
+			<Option target="simulatorProject"/>
+		</Unit>
+		<Unit filename="/Users/yuvalkasner/Documents/c++ projects/simulatorProject/SymbolTable.h">
+			<Option target="simulatorProject"/>
+		</Unit>
+		<Unit filename="/Users/yuvalkasner/Documents/c++ projects/simulatorProject/commands/Command.h">
+			<Option target="simulatorProject"/>
+		</Unit>
+		<Unit filename="/Users/yuvalkasner/Documents/c++ projects/simulatorProject/commands/ConditionParser.h">
+			<Option target="simulatorProject"/>
+		</Unit>
+		<Unit filename="/Users/yuvalkasner/Documents/c++ projects/simulatorProject/commands/ConnectCommand.cpp">
+			<Option target="simulatorProject"/>
+		</Unit>
+		<Unit filename="/Users/yuvalkasner/Documents/c++ projects/simulatorProject/commands/DefineVarCommand.cpp">
+			<Option target="simulatorProject"/>
+		</Unit>
+		<Unit filename="/Users/yuvalkasner/Documents/c++ projects/simulatorProject/commands/ForLoop.cpp">
+			<Option target="simulatorProject"/>
+		</Unit>
+		<Unit filename="/Users/yuvalkasner/Documents/c++ projects/simulatorProject/commands/FuncCommand.cpp">
+			<Option target="simulatorProject"/>
+		</Unit>
+		<Unit filename="/Users/yuvalkasner/Documents/c++ projects/simulatorProject/commands/IfCommand.cpp">
+			<Option target="simulatorProject"/>
+		</Unit>
+		<Unit filename="/Users/yuvalkasner/Documents/c++ projects/simulatorProject/commands/LoopCommand.cpp">
+			<Option target="simulatorProject"/>
+		</Unit>
+		<Unit filename="/Users/yuvalkasner/Documents/c++ projects/simulatorProject/commands/OpenServerCommand.cpp">
+			<Option target="simulatorProject"/>
+		</Unit>
 		<Unit filename="/Users/yuvalkasner/Documents/c++ projects/simulatorProject/server.cpp">
 			<Option target="simulatorProject"/>
 		</Unit>

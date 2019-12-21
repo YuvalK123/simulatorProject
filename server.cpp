@@ -6,22 +6,29 @@
 #include <arpa/inet.h>
 #include <string>
 #include <netinet/in.h>
+#include "commands/Command.h"
 
-#define PORT 5400
-#define BUFFER 1024
 using namespace std;
-int main(int argc, char const *argv[]) {
+class Server {
+ private:
+  int port = 5400;
+  int bufferSize = 1024;
+ public:
+  int execute();
+};
+
+int Server::execute() {
   while (true) {
     int listening = socket(AF_INET, SOCK_STREAM, 0);
     if (listening == -1) {
-      cerr << "cant create a socket" << endl;
+      cerr << "can't create a socket" << endl;
       return -1;
     }
     //bind
     sockaddr_in address;
     address.sin_family = AF_INET;
     address.sin_addr.s_addr = INADDR_ANY;
-    address.sin_port = htons(PORT);
+    address.sin_port = htons(port);
     inet_pton(AF_INET,"0.0.0.0",&address.sin_addr);
     if (bind(listening, (const struct sockaddr *) &address, (socklen_t) sizeof(address)) == -1) {
       cerr << "error binding";
@@ -55,12 +62,12 @@ int main(int argc, char const *argv[]) {
     }
 
     //while recieving - disp msg
-    char buff[BUFFER];
+    char buff[bufferSize];
     while (true){
       //clear buffer
-      memset(buff,0,BUFFER);
+      memset(buff, 0, bufferSize);
       //wait for msg
-      int byteRecv = recv(clientSocket,buff,BUFFER,0);
+      int byteRecv = recv(clientSocket, buff, bufferSize, 0);
       if (byteRecv == -1){
         cerr<<"connection issue"<<endl;
         break;
@@ -71,9 +78,10 @@ int main(int argc, char const *argv[]) {
       }
       //disp msg
       cout<<"recieved "<<string(buff,0,byteRecv)<<endl;
+      char *quit = "quit";
       if(strcmp(buff,"quit") == 0){
         close(clientSocket);
-        return 0;
+        break;
       }
       //resend msg
       send(clientSocket,buff,byteRecv+1,0);
@@ -81,4 +89,5 @@ int main(int argc, char const *argv[]) {
     //close
     close(clientSocket);
   }
+  return 0;
 }
