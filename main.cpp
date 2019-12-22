@@ -10,15 +10,17 @@ int main() {
     vector<string> codeArray;
     ifstream codeFile;
     codeFile.open("fly");
-    if(codeFile.is_open()){
+    if (codeFile.is_open()) {
         codeArray = lexer(codeFile);
-    }else{
+    } else {
         cout << "file not open" << endl;
     }
 }
 
 
-
+//lexer function separate the code to strings.
+//input: a file that contains a code.
+//output: vector to string that contains string from the code file.
 vector<string> lexer(ifstream &codeFile) {
 
     vector<string> codeArray;
@@ -38,14 +40,14 @@ vector<string> lexer(ifstream &codeFile) {
 
             for (int i = 0; i < currentString.size(); i++) {
                 //check if there is tab
-                if(currentString[i] == '\t'){
-                    leftPos += i +1;
+                if (currentString[i] == '\t') {
+                    leftPos += i + 1;
                 }
                     //check if the char is a space and it is not in a brackets
                 else if (currentString[i] == ' ' && !flagInBrackets) {
                     range = i - leftPos;
                     pushS = currentString.substr(leftPos, range);
-                    if(pushS != ""){
+                    if (pushS != "") {
                         codeArray.push_back(pushS);
                     }
                     leftPos += range + 1;
@@ -55,7 +57,7 @@ vector<string> lexer(ifstream &codeFile) {
                     flagInBrackets = 1;
                     range = i - leftPos;
                     pushS = currentString.substr(leftPos, range);
-                    if(pushS != ""){
+                    if (pushS != "") {
                         codeArray.push_back(pushS);
                     }
                     leftPos += range + 1;
@@ -64,7 +66,7 @@ vector<string> lexer(ifstream &codeFile) {
                 else if (currentString[i] == ',') {
                     range = i - leftPos;
                     pushS = currentString.substr(leftPos, range);
-                    if(pushS != ""){
+                    if (pushS != "") {
                         codeArray.push_back(pushS);
                     }
                     leftPos += range + 1;
@@ -74,13 +76,13 @@ vector<string> lexer(ifstream &codeFile) {
                     flagInBrackets = 0;
                     range = i - leftPos;
                     pushS = currentString.substr(leftPos, range);
-                    if(pushS != ""){
+                    if (pushS != "") {
                         codeArray.push_back(pushS);
                     }
                     leftPos += range + 1;
                 }
-                // check if the char is =>
-                else if (currentString[i] == '=' && currentString[i+1] == '>') {
+                    // check if the char is =>
+                else if (currentString[i] == '=' && currentString[i + 1] == '>') {
                     if (i != leftPos) {
                         range = i - leftPos;
                         pushS = currentString.substr(leftPos, range);
@@ -94,7 +96,7 @@ vector<string> lexer(ifstream &codeFile) {
                     }
                     codeArray.push_back("=>");
                 }
-                // check if the char is <-
+                    // check if the char is <-
                 else if (currentString[i] == '<' && currentString[i + 1] == '-') {
                     if (i != leftPos) {
                         range = i - leftPos;
@@ -107,8 +109,8 @@ vector<string> lexer(ifstream &codeFile) {
                     }
                     codeArray.push_back("<-");
                 }
-                // check if the char is <=
-                else if (currentString[i] == '<' && currentString[i+1] == '=' ) {
+                    // check if the char is <=
+                else if (currentString[i] == '<' && currentString[i + 1] == '=') {
                     if (i != leftPos) {
                         range = i - leftPos;
                         pushS = currentString.substr(leftPos, range);
@@ -122,35 +124,35 @@ vector<string> lexer(ifstream &codeFile) {
                     }
                     codeArray.push_back("<=");
                 }
-                // check if the char is =
+                    // check if the char is =
                 else if (currentString[i] == '=') {
                     if (i != leftPos) {
                         range = i - leftPos;
                         pushS = currentString.substr(leftPos, range);
-                        if(pushS != ""){
+                        if (pushS != "") {
                             codeArray.push_back(pushS);
                         }
-                        leftPos += range +1;
+                        leftPos += range + 1;
                     } else {
                         leftPos++;
                     }
                     codeArray.push_back("=");
                 }
-                // check if the char is <
+                    // check if the char is <
                 else if (currentString[i] == '<') {
                     if (i != leftPos) {
                         range = i - leftPos;
                         pushS = currentString.substr(leftPos, range);
-                        if(pushS != ""){
+                        if (pushS != "") {
                             codeArray.push_back(pushS);
                         }
-                        leftPos += range +1;
+                        leftPos += range + 1;
                     } else {
                         leftPos++;
                     }
                     codeArray.push_back("<");
                 }
-                // check if the char is >
+                    // check if the char is >
                 else if (currentString[i] == '>') {
                     if (i != leftPos) {
                         range = i - leftPos;
@@ -164,7 +166,7 @@ vector<string> lexer(ifstream &codeFile) {
                     }
                     codeArray.push_back(">");
                 }
-                // check if the char is ->
+                    // check if the char is ->
                 else if (currentString[i] == '-' && currentString[i + 1] == '>') {
                     if (i != leftPos) {
                         range = i - leftPos;
@@ -177,30 +179,26 @@ vector<string> lexer(ifstream &codeFile) {
                     }
                     codeArray.push_back("->");
                 }
-                //elementary arithmetic functions saved in a separate cell
+                    //elementary arithmetic functions saved in a separate cell
                 else if (currentString[i] == '/' && !flagInBrackets) {
                     codeArray.push_back("/");
                     leftPos++;
-                }
-                else if (currentString[i] == '+' && !flagInBrackets) {
+                } else if (currentString[i] == '+' && !flagInBrackets) {
                     codeArray.push_back("+");
                     leftPos++;
-                }
-                else if (currentString[i] == '-' && !flagInBrackets) {
+                } else if (currentString[i] == '-' && !flagInBrackets) {
                     codeArray.push_back("-");
                     leftPos++;
-                }
-                else if (currentString[i] == '*' && !flagInBrackets) {
+                } else if (currentString[i] == '*' && !flagInBrackets) {
                     codeArray.push_back("*");
                     leftPos++;
                 }
-                //end of string
+                    //end of string
                 else if (i == currentString.size() - 1) {
                     range = i - leftPos;
-                    if(range != 0){
-                        pushS = currentString.substr(leftPos, range+1);
-                    }
-                    else{
+                    if (range != 0) {
+                        pushS = currentString.substr(leftPos, range + 1);
+                    } else {
                         pushS = currentString[i];
                     }
                     codeArray.push_back(pushS);
