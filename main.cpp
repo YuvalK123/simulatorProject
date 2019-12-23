@@ -9,7 +9,7 @@ vector<string> lexer(ifstream &file);
 int main() {
     vector<string> codeArray;
     ifstream codeFile;
-    codeFile.open("try");
+    codeFile.open("fly");
     if (codeFile.is_open()) {
         codeArray = lexer(codeFile);
     } else {
