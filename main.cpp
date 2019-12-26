@@ -1,22 +1,76 @@
 #include <iostream>
 #include <fstream>
 #include <regex>
+#include <unordered_map>
+
+//include commands
+#include "commands/Command.h"
+#include "commands/OpenServerCommand.cpp"
+#include "commands/DefineVarCommand.cpp"
+#include "commands/ConnectCommand.cpp"
+#include "commands/IfCommand.cpp"
+#include "commands/Print.cpp"
+#include "commands/Sleep.cpp"
+//#include "commands/ForLoop.cpp"
 
 using namespace std;
 
 vector<string> lexer(ifstream &file);
+void parser(vector<string> codeArray);
 
 int main() {
     vector<string> codeArray;
     ifstream codeFile;
-    codeFile.open("fly");
+    codeFile.open("try");
     if (codeFile.is_open()) {
         codeArray = lexer(codeFile);
+       // parser(codeArray);
     } else {
         cout << "file not open" << endl;
     }
 }
 
+//parser function go throw the array and call to execute function if the string is a command or a variable.
+//input: vector of strings that contains strings from the code file.
+//output: none
+void parser(vector<string> codeArray){
+
+    unordered_map <string,Command> commandMap;
+    //how??
+    unordered_map <string,DefineVarCommand> symbolTable;
+
+    //create the command map
+    OpenServerCommand open;
+    commandMap["openDataServer"] = open;
+    ConnectCommand connect;
+    commandMap["connectControlClient"] = connect;
+    DefineVarCommand defineVar;
+    commandMap["var"] = defineVar;
+    /*IfCommand ifC;
+    commandMap["if"]= ifC;
+    ForLoop forC;
+    commandMap["for"] = forC;*/
+    Print printC;
+    commandMap["Print"] = printC;
+    Sleep sleepC;
+    commandMap["Sleep"] = sleepC;
+
+
+    for(int i=0; i<codeArray.size();i++){
+        //if the string is a command
+        if(commandMap.count(codeArray[i] ) > 0){
+            Command c = commandMap[codeArray[i]];
+            i += c.execute();
+        }
+        else{
+            string var = codeArray[i];
+            //if the string is a var
+            if(symbolTable.count(var) > 0){
+                i += symbolTable[var].execute();
+            }
+        }
+    }
+}
 
 //lexer function separate the code to strings.
 //input: a file that contains a code.
