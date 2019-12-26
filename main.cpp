@@ -166,6 +166,16 @@ vector<string> lexer(ifstream &codeFile) {
                         leftPos++;
                     }
                     codeArray.push_back("=");
+
+                    //after "=" there is an expression that should be in one cell.
+                    string expression;
+                    for(int j=i + 1;j<currentString.size();j++){
+                        if(currentString[j]  != ' '){
+                            expression += currentString[j];
+                        }
+                    }
+                    codeArray.push_back(expression);
+                    i = currentString.size();
                 }
                 // check if the char is <
                 else if (currentString[i] == '<') {
@@ -208,21 +218,7 @@ vector<string> lexer(ifstream &codeFile) {
                     }
                     codeArray.push_back("->");
                 }
-                //elementary arithmetic functions saved in a separate cell
-                else if (currentString[i] == '/' && !flagInBrackets) {
-                    codeArray.push_back("/");
-                    leftPos++;
-                } else if (currentString[i] == '+' && !flagInBrackets) {
-                    codeArray.push_back("+");
-                    leftPos++;
-                } else if (currentString[i] == '-' && !flagInBrackets) {
-                    codeArray.push_back("-");
-                    leftPos++;
-                } else if (currentString[i] == '*' && !flagInBrackets) {
-                    codeArray.push_back("*");
-                    leftPos++;
-                }
-                    //end of string
+                //end of string
                 else if (i == currentString.size() - 1) {
                     range = i - leftPos;
                     if (range != 0) {
@@ -233,18 +229,15 @@ vector<string> lexer(ifstream &codeFile) {
                     codeArray.push_back(pushS);
                 }
             }
-            //end of a line
-            codeArray.push_back(";");
         }
 
-
         //print vector
-        int size = codeArray.size();
+       /* int size = codeArray.size();
         for (int i = 0; i < size; i++) {
             cout << i << endl;
             cout << "codeArray: " + codeArray.back() << endl;
             codeArray.pop_back();
-        }
+        }*/
     }
     return codeArray;
 }
