@@ -86,13 +86,23 @@ vector<string> lexer(ifstream &codeFile) {
     if (!codeFile.is_open()) {
         cout << "file not open" << endl;
     } else {
+        int firstLine = 0;
         while (getline(codeFile, currentString)) {
+            firstLine++;
+            int start = 0;
             int leftPos = 0;
             int range = 0;
             string pushS;
             int flagInBrackets = 0;
 
-            for (int i = 0; i < currentString.size(); i++) {
+            //if is the first line in the file
+            if(firstLine == 1){
+                leftPos = 3;
+                start = 3;
+            }
+
+
+            for (int i = start; i < currentString.size(); i++) {
 
                 //check if there is tab
                 if (currentString[i] == '\t') {
@@ -286,12 +296,12 @@ vector<string> lexer(ifstream &codeFile) {
         }
 
         //print vector
-       /* int size = codeArray.size();
+        int size = codeArray.size();
         for (int i = 0; i < size; i++) {
             cout << i << endl;
-            cout << "codeArray: " + codeArray.back() << endl;
+            cout << "codeArray:" + codeArray.back() << endl;
             codeArray.pop_back();
-        }*/
+        }
     }
     return codeArray;
 }
