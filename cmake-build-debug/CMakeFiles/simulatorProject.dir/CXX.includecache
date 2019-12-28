@@ -6,21 +6,27 @@
 
 #IncludeRegexTransform: 
 
-/Users/yuvalkasner/Documents/c++ projects/simulatorProject/server.cpp
+/Users/yuvalkasner/Documents/c++_projects/simulatorProject/SimManager.cpp
+SimManager.h
+/Users/yuvalkasner/Documents/c++_projects/simulatorProject/SimManager.h
 iostream
 -
-sys/socket.h
+fstream
 -
-sys/types.h
+regex
 -
-unistd.h
--
-netdb.h
--
-arpa/inet.h
--
+
+/Users/yuvalkasner/Documents/c++_projects/simulatorProject/SimManager.h
+commands/Command.h
+/Users/yuvalkasner/Documents/c++_projects/simulatorProject/commands/Command.h
+unordered_map
+/Users/yuvalkasner/Documents/c++_projects/simulatorProject/unordered_map
+iostream
+/Users/yuvalkasner/Documents/c++_projects/simulatorProject/iostream
+
+/Users/yuvalkasner/Documents/c++_projects/simulatorProject/commands/Command.h
+vector
+/Users/yuvalkasner/Documents/c++_projects/simulatorProject/commands/vector
 string
--
-netinet/in.h
--
+/Users/yuvalkasner/Documents/c++_projects/simulatorProject/commands/string
 

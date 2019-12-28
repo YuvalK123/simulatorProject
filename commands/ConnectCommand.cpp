@@ -5,9 +5,9 @@
 #include "Command.h"
 class ConnectCommand : Command {
  public:
-  int execute() override;
+  int execute(vector<string>::iterator it) override;
 };
 
-int ConnectCommand::execute() {
+int ConnectCommand::execute(vector<string>::iterator it) {
   return 0;
 }

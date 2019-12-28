@@ -2,23 +2,17 @@
 // Created by yuval Kasner on 20/12/19.
 //
 
-#include "ConditionParser.h"
-#include "vector"
-using namespace std;
-class LoopCommand : ConditionParser, Command {
- private:
-  vector<Command> commands;
- public:
-  int execute() override;
-  explicit LoopCommand(bool cond);
-};
-int LoopCommand::execute() {
-  int index = 0;
-  for (Command command : commands) {
-    index += command.execute();
-  }
-  return index;
+#include "LoopCommand.h"
+int LoopCommand::execute(vector<string>::iterator it) {
+  //read array until } and enter commands to command
+//  while (condition) {
+//    for (Command *command : commands) {
+//      index += command->execute(vec,index);
+//    }
+//  }
+
+  return 0;
 }
-LoopCommand::LoopCommand(bool cond) : ConditionParser(cond) {
+LoopCommand::LoopCommand() {
 
 }

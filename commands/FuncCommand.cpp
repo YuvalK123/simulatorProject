@@ -5,8 +5,8 @@
 #include "Command.h"
 class FuncCommand : Command {
  public:
-  int execute() override;
+  int execute(vector<string>::iterator it) override;
 };
-int FuncCommand::execute() {
+int FuncCommand::execute(vector<string>::iterator it) {
   return 0;
 }

@@ -48,10 +48,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/Users/yuvalkasner/Documents/c++ projects/simulatorProject"
+CMAKE_SOURCE_DIR = /Users/yuvalkasner/Documents/c++_projects/simulatorProject
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/Users/yuvalkasner/Documents/c++ projects/simulatorProject/cmake-build-debug"
+CMAKE_BINARY_DIR = /Users/yuvalkasner/Documents/c++_projects/simulatorProject/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/yuvalkasner/Documents/c++ projects/simulatorProject/cmake-build-debug/CMakeFiles" "/Users/yuvalkasner/Documents/c++ projects/simulatorProject/cmake-build-debug/CMakeFiles/progress.marks"
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/yuvalkasner/Documents/c++_projects/simulatorProject/cmake-build-debug/CMakeFiles /Users/yuvalkasner/Documents/c++_projects/simulatorProject/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start "/Users/yuvalkasner/Documents/c++ projects/simulatorProject/cmake-build-debug/CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/yuvalkasner/Documents/c++_projects/simulatorProject/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -123,6 +123,60 @@ simulatorProject/fast:
 	$(MAKE) -f CMakeFiles/simulatorProject.dir/build.make CMakeFiles/simulatorProject.dir/build
 .PHONY : simulatorProject/fast
 
+Observer.o: Observer.cpp.o
+
+.PHONY : Observer.o
+
+# target to build an object file
+Observer.cpp.o:
+	$(MAKE) -f CMakeFiles/simulatorProject.dir/build.make CMakeFiles/simulatorProject.dir/Observer.cpp.o
+.PHONY : Observer.cpp.o
+
+Observer.i: Observer.cpp.i
+
+.PHONY : Observer.i
+
+# target to preprocess a source file
+Observer.cpp.i:
+	$(MAKE) -f CMakeFiles/simulatorProject.dir/build.make CMakeFiles/simulatorProject.dir/Observer.cpp.i
+.PHONY : Observer.cpp.i
+
+Observer.s: Observer.cpp.s
+
+.PHONY : Observer.s
+
+# target to generate assembly for a file
+Observer.cpp.s:
+	$(MAKE) -f CMakeFiles/simulatorProject.dir/build.make CMakeFiles/simulatorProject.dir/Observer.cpp.s
+.PHONY : Observer.cpp.s
+
+SimManager.o: SimManager.cpp.o
+
+.PHONY : SimManager.o
+
+# target to build an object file
+SimManager.cpp.o:
+	$(MAKE) -f CMakeFiles/simulatorProject.dir/build.make CMakeFiles/simulatorProject.dir/SimManager.cpp.o
+.PHONY : SimManager.cpp.o
+
+SimManager.i: SimManager.cpp.i
+
+.PHONY : SimManager.i
+
+# target to preprocess a source file
+SimManager.cpp.i:
+	$(MAKE) -f CMakeFiles/simulatorProject.dir/build.make CMakeFiles/simulatorProject.dir/SimManager.cpp.i
+.PHONY : SimManager.cpp.i
+
+SimManager.s: SimManager.cpp.s
+
+.PHONY : SimManager.s
+
+# target to generate assembly for a file
+SimManager.cpp.s:
+	$(MAKE) -f CMakeFiles/simulatorProject.dir/build.make CMakeFiles/simulatorProject.dir/SimManager.cpp.s
+.PHONY : SimManager.cpp.s
+
 SymbolTable.o: SymbolTable.cpp.o
 
 .PHONY : SymbolTable.o
@@ -149,6 +203,60 @@ SymbolTable.s: SymbolTable.cpp.s
 SymbolTable.cpp.s:
 	$(MAKE) -f CMakeFiles/simulatorProject.dir/build.make CMakeFiles/simulatorProject.dir/SymbolTable.cpp.s
 .PHONY : SymbolTable.cpp.s
+
+client.o: client.cpp.o
+
+.PHONY : client.o
+
+# target to build an object file
+client.cpp.o:
+	$(MAKE) -f CMakeFiles/simulatorProject.dir/build.make CMakeFiles/simulatorProject.dir/client.cpp.o
+.PHONY : client.cpp.o
+
+client.i: client.cpp.i
+
+.PHONY : client.i
+
+# target to preprocess a source file
+client.cpp.i:
+	$(MAKE) -f CMakeFiles/simulatorProject.dir/build.make CMakeFiles/simulatorProject.dir/client.cpp.i
+.PHONY : client.cpp.i
+
+client.s: client.cpp.s
+
+.PHONY : client.s
+
+# target to generate assembly for a file
+client.cpp.s:
+	$(MAKE) -f CMakeFiles/simulatorProject.dir/build.make CMakeFiles/simulatorProject.dir/client.cpp.s
+.PHONY : client.cpp.s
+
+commands/ConditionalParser.o: commands/ConditionalParser.cpp.o
+
+.PHONY : commands/ConditionalParser.o
+
+# target to build an object file
+commands/ConditionalParser.cpp.o:
+	$(MAKE) -f CMakeFiles/simulatorProject.dir/build.make CMakeFiles/simulatorProject.dir/commands/ConditionalParser.cpp.o
+.PHONY : commands/ConditionalParser.cpp.o
+
+commands/ConditionalParser.i: commands/ConditionalParser.cpp.i
+
+.PHONY : commands/ConditionalParser.i
+
+# target to preprocess a source file
+commands/ConditionalParser.cpp.i:
+	$(MAKE) -f CMakeFiles/simulatorProject.dir/build.make CMakeFiles/simulatorProject.dir/commands/ConditionalParser.cpp.i
+.PHONY : commands/ConditionalParser.cpp.i
+
+commands/ConditionalParser.s: commands/ConditionalParser.cpp.s
+
+.PHONY : commands/ConditionalParser.s
+
+# target to generate assembly for a file
+commands/ConditionalParser.cpp.s:
+	$(MAKE) -f CMakeFiles/simulatorProject.dir/build.make CMakeFiles/simulatorProject.dir/commands/ConditionalParser.cpp.s
+.PHONY : commands/ConditionalParser.cpp.s
 
 commands/ConnectCommand.o: commands/ConnectCommand.cpp.o
 
@@ -339,6 +447,87 @@ commands/OpenServerCommand.cpp.s:
 	$(MAKE) -f CMakeFiles/simulatorProject.dir/build.make CMakeFiles/simulatorProject.dir/commands/OpenServerCommand.cpp.s
 .PHONY : commands/OpenServerCommand.cpp.s
 
+commands/Print.o: commands/Print.cpp.o
+
+.PHONY : commands/Print.o
+
+# target to build an object file
+commands/Print.cpp.o:
+	$(MAKE) -f CMakeFiles/simulatorProject.dir/build.make CMakeFiles/simulatorProject.dir/commands/Print.cpp.o
+.PHONY : commands/Print.cpp.o
+
+commands/Print.i: commands/Print.cpp.i
+
+.PHONY : commands/Print.i
+
+# target to preprocess a source file
+commands/Print.cpp.i:
+	$(MAKE) -f CMakeFiles/simulatorProject.dir/build.make CMakeFiles/simulatorProject.dir/commands/Print.cpp.i
+.PHONY : commands/Print.cpp.i
+
+commands/Print.s: commands/Print.cpp.s
+
+.PHONY : commands/Print.s
+
+# target to generate assembly for a file
+commands/Print.cpp.s:
+	$(MAKE) -f CMakeFiles/simulatorProject.dir/build.make CMakeFiles/simulatorProject.dir/commands/Print.cpp.s
+.PHONY : commands/Print.cpp.s
+
+commands/Sleep.o: commands/Sleep.cpp.o
+
+.PHONY : commands/Sleep.o
+
+# target to build an object file
+commands/Sleep.cpp.o:
+	$(MAKE) -f CMakeFiles/simulatorProject.dir/build.make CMakeFiles/simulatorProject.dir/commands/Sleep.cpp.o
+.PHONY : commands/Sleep.cpp.o
+
+commands/Sleep.i: commands/Sleep.cpp.i
+
+.PHONY : commands/Sleep.i
+
+# target to preprocess a source file
+commands/Sleep.cpp.i:
+	$(MAKE) -f CMakeFiles/simulatorProject.dir/build.make CMakeFiles/simulatorProject.dir/commands/Sleep.cpp.i
+.PHONY : commands/Sleep.cpp.i
+
+commands/Sleep.s: commands/Sleep.cpp.s
+
+.PHONY : commands/Sleep.s
+
+# target to generate assembly for a file
+commands/Sleep.cpp.s:
+	$(MAKE) -f CMakeFiles/simulatorProject.dir/build.make CMakeFiles/simulatorProject.dir/commands/Sleep.cpp.s
+.PHONY : commands/Sleep.cpp.s
+
+main.o: main.cpp.o
+
+.PHONY : main.o
+
+# target to build an object file
+main.cpp.o:
+	$(MAKE) -f CMakeFiles/simulatorProject.dir/build.make CMakeFiles/simulatorProject.dir/main.cpp.o
+.PHONY : main.cpp.o
+
+main.i: main.cpp.i
+
+.PHONY : main.i
+
+# target to preprocess a source file
+main.cpp.i:
+	$(MAKE) -f CMakeFiles/simulatorProject.dir/build.make CMakeFiles/simulatorProject.dir/main.cpp.i
+.PHONY : main.cpp.i
+
+main.s: main.cpp.s
+
+.PHONY : main.s
+
+# target to generate assembly for a file
+main.cpp.s:
+	$(MAKE) -f CMakeFiles/simulatorProject.dir/build.make CMakeFiles/simulatorProject.dir/main.cpp.s
+.PHONY : main.cpp.s
+
 server.o: server.cpp.o
 
 .PHONY : server.o
@@ -375,9 +564,21 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... simulatorProject"
+	@echo "... Observer.o"
+	@echo "... Observer.i"
+	@echo "... Observer.s"
+	@echo "... SimManager.o"
+	@echo "... SimManager.i"
+	@echo "... SimManager.s"
 	@echo "... SymbolTable.o"
 	@echo "... SymbolTable.i"
 	@echo "... SymbolTable.s"
+	@echo "... client.o"
+	@echo "... client.i"
+	@echo "... client.s"
+	@echo "... commands/ConditionalParser.o"
+	@echo "... commands/ConditionalParser.i"
+	@echo "... commands/ConditionalParser.s"
 	@echo "... commands/ConnectCommand.o"
 	@echo "... commands/ConnectCommand.i"
 	@echo "... commands/ConnectCommand.s"
@@ -399,6 +600,15 @@ help:
 	@echo "... commands/OpenServerCommand.o"
 	@echo "... commands/OpenServerCommand.i"
 	@echo "... commands/OpenServerCommand.s"
+	@echo "... commands/Print.o"
+	@echo "... commands/Print.i"
+	@echo "... commands/Print.s"
+	@echo "... commands/Sleep.o"
+	@echo "... commands/Sleep.i"
+	@echo "... commands/Sleep.s"
+	@echo "... main.o"
+	@echo "... main.i"
+	@echo "... main.s"
 	@echo "... server.o"
 	@echo "... server.i"
 	@echo "... server.s"

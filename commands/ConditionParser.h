@@ -5,14 +5,18 @@
 #ifndef SIMULATORPROJECT_COMMANDS_CONDITIONPARSER_H_
 #define SIMULATORPROJECT_COMMANDS_CONDITIONPARSER_H_
 #include "Command.h"
-class ConditionParser : Command {
+class ConditionParser : public Command {
  private:
-  bool condition;
+  string getArithmetic(string left, string right, const char *arithmetic);
+ protected:
+  bool condition = false;
+  vector<Command *> commands;
  public:
-  explicit ConditionParser(bool cond);
-  int execute() override = 0;
+  ConditionParser() = default;
+  int execute(vector<string>::iterator it) override = 0;
+  void initiateCond(vector<const char *> vec, int index);
 };
-ConditionParser::ConditionParser(bool cond) {
-  this->condition = cond;
-}
+
+
+
 #endif //SIMULATORPROJECT_COMMANDS_CONDITIONPARSER_H_

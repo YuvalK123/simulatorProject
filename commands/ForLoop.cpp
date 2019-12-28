@@ -1,25 +1,17 @@
 //
 // Created by yuval Kasner on 20/12/19.
 //
-#include "LoopCommand.cpp"
-#include "DefineVarCommand.cpp"
-#include <vector>
-using namespace std;
-class ForLoop : LoopCommand {
- private:
-
-  ForLoop() : LoopCommand(false) {}
-  //funcs
-  void init();
-  void operation();
- public:
-  int execute() override;
-};
-int ForLoop::execute() {
+#include "ForLoop.h"
+int ForLoop::execute(vector<string>::iterator it) {
+  init();
+//  while (condition) {
+//    LoopCommand::execute(vec,index);
+//    operation();
+//  }
   return 0;
 }
 void ForLoop::operation() {
-
+  this->condition = false;
 }
 void ForLoop::init() {
 
