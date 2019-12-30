@@ -1,27 +1,49 @@
 //
 // Created by yuval Kasner on 26/12/19.
 //
-#include "SimManager.h"
 #include "ostream"
-#include <fstream>
 #include "chrono"
 #include "thread"
 #include "Server.h"
+#include "commands/DefineVarCommand.h"
+#include "commands/OpenServerCommand.h"
+#include "commands/ConnectCommand.h"
+#include "commands/IfCommand.h"
+#include "commands/LoopCommand.h"
+#include "commands/Sleep.h"
+#include "commands/Print.h"
+#include "commands/ForLoop.h"
+#include "SimulatorHelper.h"
+unordered_map<string, Command *> setCommands();
+
 int main(int argc, const char *argv[]) {
-//  string fileName = argv[1];
-  SimManager sim;
-//  sim.initVarss();
+  helper = new SimulatorHelper(setCommands());
+  helper->getManager()->initVarss();
+//  string s = "3200";
+//  cout<<500 + helper->getInterpret()->interpret(s)->calculate();
   ifstream codeFile;
-  codeFile.open("/Users/yuvalkasner/Documents/c++_projects/simulatorProject/fly.txt");
+  codeFile.open("fly.txt");
   if (!codeFile.is_open()) {
     cerr << "failed to open from main" << endl;
     return -1;
   }
-  cout << "serv" << endl;
-  Server serv(&sim);
+//  cout << "serv" << endl;
+//  Server serv((helper->getManager()));
 //  cout<<serv.execute(5400);
 //  std::this_thread::sleep_for(std::chrono::seconds(30));
-  sim.lexer(codeFile);
-  sim.parser();
+  helper->getManager()->lexer(codeFile);
+  helper->getManager()->parser();
   codeFile.close();
+}
+unordered_map<string, Command *> setCommands() {
+  unordered_map<string, Command *> commandMap;
+  commandMap.insert(make_pair("openDataServer", new OpenServerCommand()));
+  commandMap.insert(make_pair("connectControlClient", new ConnectCommand()));
+  commandMap.insert(make_pair("var", new DefineVarCommand()));
+  commandMap.insert(make_pair("if", new IfCommand()));
+  commandMap.insert(make_pair("while", new LoopCommand()));
+  commandMap.insert(make_pair("for", new ForLoop()));
+  commandMap.insert(make_pair("Print", new Print()));
+  commandMap.insert(make_pair("Sleep", new Sleep()));
+  return commandMap;
 }

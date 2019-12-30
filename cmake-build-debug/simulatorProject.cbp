@@ -8,38 +8,38 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/Users/yuvalkasner/Documents/c++_projects/simulatorProject/cmake-build-debug"/>
+				<Option working_dir="/Users/yuvalkasner/Documents/Cplus_projects/simulatorProject/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/yuvalkasner/Documents/c++_projects/simulatorProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/yuvalkasner/Documents/c++_projects/simulatorProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/yuvalkasner/Documents/c++_projects/simulatorProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/yuvalkasner/Documents/c++_projects/simulatorProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/yuvalkasner/Documents/Cplus_projects/simulatorProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/yuvalkasner/Documents/Cplus_projects/simulatorProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/yuvalkasner/Documents/Cplus_projects/simulatorProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/yuvalkasner/Documents/Cplus_projects/simulatorProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/Users/yuvalkasner/Documents/c++_projects/simulatorProject/cmake-build-debug"/>
+				<Option working_dir="/Users/yuvalkasner/Documents/Cplus_projects/simulatorProject/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/yuvalkasner/Documents/c++_projects/simulatorProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/yuvalkasner/Documents/c++_projects/simulatorProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/yuvalkasner/Documents/c++_projects/simulatorProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/yuvalkasner/Documents/c++_projects/simulatorProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/yuvalkasner/Documents/Cplus_projects/simulatorProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/yuvalkasner/Documents/Cplus_projects/simulatorProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/yuvalkasner/Documents/Cplus_projects/simulatorProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/yuvalkasner/Documents/Cplus_projects/simulatorProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/Users/yuvalkasner/Documents/c++_projects/simulatorProject/cmake-build-debug"/>
+				<Option working_dir="/Users/yuvalkasner/Documents/Cplus_projects/simulatorProject/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/yuvalkasner/Documents/c++_projects/simulatorProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/yuvalkasner/Documents/c++_projects/simulatorProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/yuvalkasner/Documents/c++_projects/simulatorProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/yuvalkasner/Documents/c++_projects/simulatorProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/yuvalkasner/Documents/Cplus_projects/simulatorProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/yuvalkasner/Documents/Cplus_projects/simulatorProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/yuvalkasner/Documents/Cplus_projects/simulatorProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/yuvalkasner/Documents/Cplus_projects/simulatorProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="simulatorProject">
-				<Option output="/Users/yuvalkasner/Documents/c++_projects/simulatorProject/cmake-build-debug/simulatorProject" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/yuvalkasner/Documents/c++_projects/simulatorProject/cmake-build-debug"/>
+				<Option output="/Users/yuvalkasner/Documents/Cplus_projects/simulatorProject/cmake-build-debug/simulatorProject" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/yuvalkasner/Documents/Cplus_projects/simulatorProject/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -53,15 +53,15 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/yuvalkasner/Documents/c++_projects/simulatorProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 simulatorProject"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/yuvalkasner/Documents/c++_projects/simulatorProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/yuvalkasner/Documents/c++_projects/simulatorProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/yuvalkasner/Documents/c++_projects/simulatorProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/yuvalkasner/Documents/Cplus_projects/simulatorProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 simulatorProject"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/yuvalkasner/Documents/Cplus_projects/simulatorProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/yuvalkasner/Documents/Cplus_projects/simulatorProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/yuvalkasner/Documents/Cplus_projects/simulatorProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="simulatorProject/fast">
-				<Option output="/Users/yuvalkasner/Documents/c++_projects/simulatorProject/cmake-build-debug/simulatorProject" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/yuvalkasner/Documents/c++_projects/simulatorProject/cmake-build-debug"/>
+				<Option output="/Users/yuvalkasner/Documents/Cplus_projects/simulatorProject/cmake-build-debug/simulatorProject" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/yuvalkasner/Documents/Cplus_projects/simulatorProject/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -75,98 +75,116 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/yuvalkasner/Documents/c++_projects/simulatorProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 simulatorProject/fast"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/yuvalkasner/Documents/c++_projects/simulatorProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/yuvalkasner/Documents/c++_projects/simulatorProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/yuvalkasner/Documents/c++_projects/simulatorProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/yuvalkasner/Documents/Cplus_projects/simulatorProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 simulatorProject/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/yuvalkasner/Documents/Cplus_projects/simulatorProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/yuvalkasner/Documents/Cplus_projects/simulatorProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/yuvalkasner/Documents/Cplus_projects/simulatorProject/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/yuvalkasner/Documents/c++_projects/simulatorProject/LRU.h">
+		<Unit filename="/Users/yuvalkasner/Documents/Cplus_projects/simulatorProject/Client.h">
 			<Option target="simulatorProject"/>
 		</Unit>
-		<Unit filename="/Users/yuvalkasner/Documents/c++_projects/simulatorProject/Observer.cpp">
+		<Unit filename="/Users/yuvalkasner/Documents/Cplus_projects/simulatorProject/Server.h">
 			<Option target="simulatorProject"/>
 		</Unit>
-		<Unit filename="/Users/yuvalkasner/Documents/c++_projects/simulatorProject/Server.h">
+		<Unit filename="/Users/yuvalkasner/Documents/Cplus_projects/simulatorProject/SimManager.cpp">
 			<Option target="simulatorProject"/>
 		</Unit>
-		<Unit filename="/Users/yuvalkasner/Documents/c++_projects/simulatorProject/SimManager.cpp">
+		<Unit filename="/Users/yuvalkasner/Documents/Cplus_projects/simulatorProject/SimManager.h">
 			<Option target="simulatorProject"/>
 		</Unit>
-		<Unit filename="/Users/yuvalkasner/Documents/c++_projects/simulatorProject/SimManager.h">
+		<Unit filename="/Users/yuvalkasner/Documents/Cplus_projects/simulatorProject/SimulatorHelper.h">
 			<Option target="simulatorProject"/>
 		</Unit>
-		<Unit filename="/Users/yuvalkasner/Documents/c++_projects/simulatorProject/SymbolTable.cpp">
+		<Unit filename="/Users/yuvalkasner/Documents/Cplus_projects/simulatorProject/client.cpp">
 			<Option target="simulatorProject"/>
 		</Unit>
-		<Unit filename="/Users/yuvalkasner/Documents/c++_projects/simulatorProject/SymbolTable.h">
+		<Unit filename="/Users/yuvalkasner/Documents/Cplus_projects/simulatorProject/client.h">
 			<Option target="simulatorProject"/>
 		</Unit>
-		<Unit filename="/Users/yuvalkasner/Documents/c++_projects/simulatorProject/client.cpp">
+		<Unit filename="/Users/yuvalkasner/Documents/Cplus_projects/simulatorProject/commands/Command.h">
 			<Option target="simulatorProject"/>
 		</Unit>
-		<Unit filename="/Users/yuvalkasner/Documents/c++_projects/simulatorProject/commands/Command.h">
+		<Unit filename="/Users/yuvalkasner/Documents/Cplus_projects/simulatorProject/commands/ConditionParser.h">
 			<Option target="simulatorProject"/>
 		</Unit>
-		<Unit filename="/Users/yuvalkasner/Documents/c++_projects/simulatorProject/commands/ConditionParser.h">
+		<Unit filename="/Users/yuvalkasner/Documents/Cplus_projects/simulatorProject/commands/ConditionalParser.cpp">
 			<Option target="simulatorProject"/>
 		</Unit>
-		<Unit filename="/Users/yuvalkasner/Documents/c++_projects/simulatorProject/commands/ConditionalParser.cpp">
+		<Unit filename="/Users/yuvalkasner/Documents/Cplus_projects/simulatorProject/commands/ConnectCommand.cpp">
 			<Option target="simulatorProject"/>
 		</Unit>
-		<Unit filename="/Users/yuvalkasner/Documents/c++_projects/simulatorProject/commands/ConnectCommand.cpp">
+		<Unit filename="/Users/yuvalkasner/Documents/Cplus_projects/simulatorProject/commands/ConnectCommand.h">
 			<Option target="simulatorProject"/>
 		</Unit>
-		<Unit filename="/Users/yuvalkasner/Documents/c++_projects/simulatorProject/commands/DefineVarCommand.cpp">
+		<Unit filename="/Users/yuvalkasner/Documents/Cplus_projects/simulatorProject/commands/DefineVarCommand.cpp">
 			<Option target="simulatorProject"/>
 		</Unit>
-		<Unit filename="/Users/yuvalkasner/Documents/c++_projects/simulatorProject/commands/DefineVarCommand.h">
+		<Unit filename="/Users/yuvalkasner/Documents/Cplus_projects/simulatorProject/commands/DefineVarCommand.h">
 			<Option target="simulatorProject"/>
 		</Unit>
-		<Unit filename="/Users/yuvalkasner/Documents/c++_projects/simulatorProject/commands/ForLoop.cpp">
+		<Unit filename="/Users/yuvalkasner/Documents/Cplus_projects/simulatorProject/commands/ForLoop.cpp">
 			<Option target="simulatorProject"/>
 		</Unit>
-		<Unit filename="/Users/yuvalkasner/Documents/c++_projects/simulatorProject/commands/ForLoop.h">
+		<Unit filename="/Users/yuvalkasner/Documents/Cplus_projects/simulatorProject/commands/ForLoop.h">
 			<Option target="simulatorProject"/>
 		</Unit>
-		<Unit filename="/Users/yuvalkasner/Documents/c++_projects/simulatorProject/commands/FuncCommand.cpp">
+		<Unit filename="/Users/yuvalkasner/Documents/Cplus_projects/simulatorProject/commands/FuncCommand.cpp">
 			<Option target="simulatorProject"/>
 		</Unit>
-		<Unit filename="/Users/yuvalkasner/Documents/c++_projects/simulatorProject/commands/IfCommand.cpp">
+		<Unit filename="/Users/yuvalkasner/Documents/Cplus_projects/simulatorProject/commands/IfCommand.cpp">
 			<Option target="simulatorProject"/>
 		</Unit>
-		<Unit filename="/Users/yuvalkasner/Documents/c++_projects/simulatorProject/commands/IfCommand.h">
+		<Unit filename="/Users/yuvalkasner/Documents/Cplus_projects/simulatorProject/commands/IfCommand.h">
 			<Option target="simulatorProject"/>
 		</Unit>
-		<Unit filename="/Users/yuvalkasner/Documents/c++_projects/simulatorProject/commands/LoopCommand.cpp">
+		<Unit filename="/Users/yuvalkasner/Documents/Cplus_projects/simulatorProject/commands/LoopCommand.cpp">
 			<Option target="simulatorProject"/>
 		</Unit>
-		<Unit filename="/Users/yuvalkasner/Documents/c++_projects/simulatorProject/commands/LoopCommand.h">
+		<Unit filename="/Users/yuvalkasner/Documents/Cplus_projects/simulatorProject/commands/LoopCommand.h">
 			<Option target="simulatorProject"/>
 		</Unit>
-		<Unit filename="/Users/yuvalkasner/Documents/c++_projects/simulatorProject/commands/OpenServerCommand.cpp">
+		<Unit filename="/Users/yuvalkasner/Documents/Cplus_projects/simulatorProject/commands/OpenServerCommand.cpp">
 			<Option target="simulatorProject"/>
 		</Unit>
-		<Unit filename="/Users/yuvalkasner/Documents/c++_projects/simulatorProject/commands/OpenServerCommand.h">
+		<Unit filename="/Users/yuvalkasner/Documents/Cplus_projects/simulatorProject/commands/OpenServerCommand.h">
 			<Option target="simulatorProject"/>
 		</Unit>
-		<Unit filename="/Users/yuvalkasner/Documents/c++_projects/simulatorProject/commands/Print.cpp">
+		<Unit filename="/Users/yuvalkasner/Documents/Cplus_projects/simulatorProject/commands/Print.cpp">
 			<Option target="simulatorProject"/>
 		</Unit>
-		<Unit filename="/Users/yuvalkasner/Documents/c++_projects/simulatorProject/commands/Sleep.cpp">
+		<Unit filename="/Users/yuvalkasner/Documents/Cplus_projects/simulatorProject/commands/Print.h">
 			<Option target="simulatorProject"/>
 		</Unit>
-		<Unit filename="/Users/yuvalkasner/Documents/c++_projects/simulatorProject/main.cpp">
+		<Unit filename="/Users/yuvalkasner/Documents/Cplus_projects/simulatorProject/commands/Sleep.cpp">
 			<Option target="simulatorProject"/>
 		</Unit>
-		<Unit filename="/Users/yuvalkasner/Documents/c++_projects/simulatorProject/server.cpp">
+		<Unit filename="/Users/yuvalkasner/Documents/Cplus_projects/simulatorProject/commands/Sleep.h">
 			<Option target="simulatorProject"/>
 		</Unit>
-		<Unit filename="/Users/yuvalkasner/Documents/c++_projects/simulatorProject/server.h">
+		<Unit filename="/Users/yuvalkasner/Documents/Cplus_projects/simulatorProject/expression.cpp">
 			<Option target="simulatorProject"/>
 		</Unit>
-		<Unit filename="/Users/yuvalkasner/Documents/c++_projects/simulatorProject/CMakeLists.txt">
+		<Unit filename="/Users/yuvalkasner/Documents/Cplus_projects/simulatorProject/expression.h">
+			<Option target="simulatorProject"/>
+		</Unit>
+		<Unit filename="/Users/yuvalkasner/Documents/Cplus_projects/simulatorProject/fly.txt">
+			<Option target="simulatorProject"/>
+		</Unit>
+		<Unit filename="/Users/yuvalkasner/Documents/Cplus_projects/simulatorProject/generic_small_to_read.txt">
+			<Option target="simulatorProject"/>
+		</Unit>
+		<Unit filename="/Users/yuvalkasner/Documents/Cplus_projects/simulatorProject/main.cpp">
+			<Option target="simulatorProject"/>
+		</Unit>
+		<Unit filename="/Users/yuvalkasner/Documents/Cplus_projects/simulatorProject/server.cpp">
+			<Option target="simulatorProject"/>
+		</Unit>
+		<Unit filename="/Users/yuvalkasner/Documents/Cplus_projects/simulatorProject/server.h">
+			<Option target="simulatorProject"/>
+		</Unit>
+		<Unit filename="/Users/yuvalkasner/Documents/Cplus_projects/simulatorProject/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

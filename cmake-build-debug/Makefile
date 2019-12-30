@@ -48,10 +48,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/yuvalkasner/Documents/c++_projects/simulatorProject
+CMAKE_SOURCE_DIR = /Users/yuvalkasner/Documents/Cplus_projects/simulatorProject
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/yuvalkasner/Documents/c++_projects/simulatorProject/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/yuvalkasner/Documents/Cplus_projects/simulatorProject/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/yuvalkasner/Documents/c++_projects/simulatorProject/cmake-build-debug/CMakeFiles /Users/yuvalkasner/Documents/c++_projects/simulatorProject/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/yuvalkasner/Documents/Cplus_projects/simulatorProject/cmake-build-debug/CMakeFiles /Users/yuvalkasner/Documents/Cplus_projects/simulatorProject/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/yuvalkasner/Documents/c++_projects/simulatorProject/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/yuvalkasner/Documents/Cplus_projects/simulatorProject/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -123,33 +123,6 @@ simulatorProject/fast:
 	$(MAKE) -f CMakeFiles/simulatorProject.dir/build.make CMakeFiles/simulatorProject.dir/build
 .PHONY : simulatorProject/fast
 
-Observer.o: Observer.cpp.o
-
-.PHONY : Observer.o
-
-# target to build an object file
-Observer.cpp.o:
-	$(MAKE) -f CMakeFiles/simulatorProject.dir/build.make CMakeFiles/simulatorProject.dir/Observer.cpp.o
-.PHONY : Observer.cpp.o
-
-Observer.i: Observer.cpp.i
-
-.PHONY : Observer.i
-
-# target to preprocess a source file
-Observer.cpp.i:
-	$(MAKE) -f CMakeFiles/simulatorProject.dir/build.make CMakeFiles/simulatorProject.dir/Observer.cpp.i
-.PHONY : Observer.cpp.i
-
-Observer.s: Observer.cpp.s
-
-.PHONY : Observer.s
-
-# target to generate assembly for a file
-Observer.cpp.s:
-	$(MAKE) -f CMakeFiles/simulatorProject.dir/build.make CMakeFiles/simulatorProject.dir/Observer.cpp.s
-.PHONY : Observer.cpp.s
-
 SimManager.o: SimManager.cpp.o
 
 .PHONY : SimManager.o
@@ -176,33 +149,6 @@ SimManager.s: SimManager.cpp.s
 SimManager.cpp.s:
 	$(MAKE) -f CMakeFiles/simulatorProject.dir/build.make CMakeFiles/simulatorProject.dir/SimManager.cpp.s
 .PHONY : SimManager.cpp.s
-
-SymbolTable.o: SymbolTable.cpp.o
-
-.PHONY : SymbolTable.o
-
-# target to build an object file
-SymbolTable.cpp.o:
-	$(MAKE) -f CMakeFiles/simulatorProject.dir/build.make CMakeFiles/simulatorProject.dir/SymbolTable.cpp.o
-.PHONY : SymbolTable.cpp.o
-
-SymbolTable.i: SymbolTable.cpp.i
-
-.PHONY : SymbolTable.i
-
-# target to preprocess a source file
-SymbolTable.cpp.i:
-	$(MAKE) -f CMakeFiles/simulatorProject.dir/build.make CMakeFiles/simulatorProject.dir/SymbolTable.cpp.i
-.PHONY : SymbolTable.cpp.i
-
-SymbolTable.s: SymbolTable.cpp.s
-
-.PHONY : SymbolTable.s
-
-# target to generate assembly for a file
-SymbolTable.cpp.s:
-	$(MAKE) -f CMakeFiles/simulatorProject.dir/build.make CMakeFiles/simulatorProject.dir/SymbolTable.cpp.s
-.PHONY : SymbolTable.cpp.s
 
 client.o: client.cpp.o
 
@@ -501,6 +447,33 @@ commands/Sleep.cpp.s:
 	$(MAKE) -f CMakeFiles/simulatorProject.dir/build.make CMakeFiles/simulatorProject.dir/commands/Sleep.cpp.s
 .PHONY : commands/Sleep.cpp.s
 
+expression.o: expression.cpp.o
+
+.PHONY : expression.o
+
+# target to build an object file
+expression.cpp.o:
+	$(MAKE) -f CMakeFiles/simulatorProject.dir/build.make CMakeFiles/simulatorProject.dir/expression.cpp.o
+.PHONY : expression.cpp.o
+
+expression.i: expression.cpp.i
+
+.PHONY : expression.i
+
+# target to preprocess a source file
+expression.cpp.i:
+	$(MAKE) -f CMakeFiles/simulatorProject.dir/build.make CMakeFiles/simulatorProject.dir/expression.cpp.i
+.PHONY : expression.cpp.i
+
+expression.s: expression.cpp.s
+
+.PHONY : expression.s
+
+# target to generate assembly for a file
+expression.cpp.s:
+	$(MAKE) -f CMakeFiles/simulatorProject.dir/build.make CMakeFiles/simulatorProject.dir/expression.cpp.s
+.PHONY : expression.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -564,15 +537,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... simulatorProject"
-	@echo "... Observer.o"
-	@echo "... Observer.i"
-	@echo "... Observer.s"
 	@echo "... SimManager.o"
 	@echo "... SimManager.i"
 	@echo "... SimManager.s"
-	@echo "... SymbolTable.o"
-	@echo "... SymbolTable.i"
-	@echo "... SymbolTable.s"
 	@echo "... client.o"
 	@echo "... client.i"
 	@echo "... client.s"
@@ -606,6 +573,9 @@ help:
 	@echo "... commands/Sleep.o"
 	@echo "... commands/Sleep.i"
 	@echo "... commands/Sleep.s"
+	@echo "... expression.o"
+	@echo "... expression.i"
+	@echo "... expression.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

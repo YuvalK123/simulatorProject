@@ -6,10 +6,11 @@
 #define SIMULATORPROJECT_COMMANDS_COMMAND_H_
 #include "vector"
 #include "string"
+
 using namespace std;
+
 class Command {
  public:
-  virtual ~Command() = default;
   virtual int execute(vector<string>::iterator it) = 0;
 };
 

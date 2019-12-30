@@ -1,7 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/simulatorProject.dir/Observer.cpp.o"
   "CMakeFiles/simulatorProject.dir/SimManager.cpp.o"
-  "CMakeFiles/simulatorProject.dir/SymbolTable.cpp.o"
   "CMakeFiles/simulatorProject.dir/client.cpp.o"
   "CMakeFiles/simulatorProject.dir/commands/ConditionalParser.cpp.o"
   "CMakeFiles/simulatorProject.dir/commands/ConnectCommand.cpp.o"
@@ -13,6 +11,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/simulatorProject.dir/commands/OpenServerCommand.cpp.o"
   "CMakeFiles/simulatorProject.dir/commands/Print.cpp.o"
   "CMakeFiles/simulatorProject.dir/commands/Sleep.cpp.o"
+  "CMakeFiles/simulatorProject.dir/expression.cpp.o"
   "CMakeFiles/simulatorProject.dir/main.cpp.o"
   "CMakeFiles/simulatorProject.dir/server.cpp.o"
   "simulatorProject"

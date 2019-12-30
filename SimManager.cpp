@@ -1,15 +1,19 @@
-//
-// Created by yuval Kasner on 26/12/19.
-//
+////
+//// Created by yuval Kasner on 26/12/19.
+////
 
 #include "SimManager.h"
-#include <iostream>
-#include <fstream>
-#include <regex>
-using namespace std;
-//lexer function separate the code to strings.
-//input: a file that contains a code.
-//output: vector to string that contains string from the code file.
+#include "mutex"
+mutex m;
+SimManager::SimManager(unordered_map<string, Command *> commands) {
+  this->client = new Client();
+  this->commandMap = commands;
+  initVarss();
+}
+//
+////lexer function separate the code to strings.
+////input: a file that contains a code.
+////output: vector to string that contains string from the code file.
 void SimManager::lexer(ifstream &codeFile) {
   vector<string> codeArray;
   if (!codeFile.is_open()) {
@@ -231,25 +235,29 @@ void SimManager::lexer(ifstream &codeFile) {
 
 }
 void SimManager::parser() {
-  for (string str : this->lex) {
-    cout << str << endl;
+  int index = 0;
+  auto it = (this->lex).begin();
+//  for (string str : this->lex) {
+//    cout << str << endl;
+//  }
+  cout << "lex size is " << (this->lex.size()) << endl;
+  while (index < this->lex.size()) {
+    Command *c = nullptr;
+    c = this->commandMap[*(it + index)];
+    if (c != nullptr) {
+//      cout<<"index is "<< index<< " and next is "<<*(it + index)<<endl;
+      index += c->execute(it + index);
+    } else {
+//      cout<<"index is "<< index<< " and next is "<<*(it + index)<<endl;
+      c = this->commandMap["var"];
+      index += c->execute(it + index);
+    }
   }
 
 }
-Command *SimManager::getVar(const string &var) {
 
-  return this->vars[var];
-}
-int SimManager::getIndex() {
-  return this->index;
-}
-string SimManager::getLex(int ind) {
-  if (ind >= this->lex.size()) {
-    cerr << "bad index" << endl;
-    throw "bad index";
-  }
-  return this->lex[ind];
-}
+
+
 void SimManager::initVarss() {
   ifstream generic_small;
   (generic_small).open("generic_small_to_read.txt");
@@ -276,25 +284,23 @@ void SimManager::initVarss() {
     for (auto p = 0; p < match.size(); p++) {
       match_str += match.str(p);
     }
-    this->id2Index.insert(make_pair(match_str, i));
+    this->id2InIndex.insert(make_pair(match_str, i));
     i++;
   }
-  for (long t = 0; t < this->id2Index.size(); t++) {
-    this->varVals.push_back(0.0);
+  for (long t = 0; t < this->id2InIndex.size(); t++) {
+    this->inVals.push_back(0.0);
+    this->outVals.push_back(0.0);
   }
 }
-SimManager::SimManager() {
-  initVarss();
-}
 
-vector<string> SimManager::split(string str, string token) {
+vector<string> SimManager::split(string str, const string &token) {
   vector<string> result;
-  while (str.size()) {
+  while (!str.empty()) {
     int index = str.find(token);
     if (index != string::npos) {
       result.push_back(str.substr(0, index));
       str = str.substr(index + token.size());
-      if (str.size() == 0) {
+      if (str.empty()) {
         result.push_back(str);
       }
     } else {
@@ -304,12 +310,35 @@ vector<string> SimManager::split(string str, string token) {
   }
   return result;
 }
-void SimManager::assignValByVec(vector<string> vals) {
-  vector<double> vec;
-  for (string str:vals) {
-    double x = stod(str);
-    this->varVals.push_back(x);
-    cout << x << endl;
-  }
-
+vector<double>::iterator SimManager::getInIndex(string str) {
+  int ind = this->id2InIndex[str];
+  return (this->inVals.begin() + ind);
 }
+vector<double>::iterator SimManager::getOutIndex(string str) {
+  int ind = this->id2OutIndex[str];
+  return (this->outVals.begin() + ind);
+}
+
+void SimManager::assignValByVec(const vector<string> &vals) {
+  vector<double> vec;
+  double x;
+  int i = 0;
+  for (const string &str:vals) {
+    try {
+      x = stod(str);
+      this->inVals[i] = x;
+      i++;
+    }
+    catch (exception &e) {
+      cerr << "error sim stod" << endl;
+//      throw "eerror";
+    }
+  }
+}
+void SimManager::sendMsg(const string &msg) {
+  int x = this->client->sendMsg(msg);
+}
+
+
+
+
