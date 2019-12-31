@@ -14,13 +14,13 @@ class LoopCommand : public ConditionParser {
 
 int LoopCommand::execute(vector<string>::iterator it) {
   int retValue = 0, tmp = setCondition(it);
-  cout << "next after is " + *it << endl;
   bool cond = false;
   while (this->condition) {
     cond = true;
     retValue = bracketsCommands(it + tmp);
     setCondition(it);
   }
+  cout << "false condition" << endl;
   retValue += tmp;
   if (!cond) { //condition doesnt happen
     cout << "not conds" << endl;

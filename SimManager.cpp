@@ -289,7 +289,6 @@ void SimManager::initVarss() {
   }
   for (long t = 0; t < this->id2InIndex.size(); t++) {
     this->inVals.push_back(0.0);
-    this->outVals.push_back(0.0);
   }
 }
 
@@ -314,10 +313,6 @@ vector<double>::iterator SimManager::getInIndex(string str) {
   int ind = this->id2InIndex[str];
   return (this->inVals.begin() + ind);
 }
-vector<double>::iterator SimManager::getOutIndex(string str) {
-  int ind = this->id2OutIndex[str];
-  return (this->outVals.begin() + ind);
-}
 
 void SimManager::assignValByVec(const vector<string> &vals) {
   vector<double> vec;
@@ -328,6 +323,9 @@ void SimManager::assignValByVec(const vector<string> &vals) {
       x = stod(str);
       this->inVals[i] = x;
       i++;
+      if (i > 35) {
+        break;
+      }
     }
     catch (exception &e) {
       cerr << "error sim stod" << endl;

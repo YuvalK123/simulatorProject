@@ -50,12 +50,6 @@ SimulatorHelper.h
 mutex
 /Users/yuvalkasner/Documents/Cplus_projects/simulatorProject/mutex
 
-/Users/yuvalkasner/Documents/Cplus_projects/simulatorProject/SimManager.cpp
-SimManager.h
-/Users/yuvalkasner/Documents/Cplus_projects/simulatorProject/SimManager.h
-mutex
-/Users/yuvalkasner/Documents/Cplus_projects/simulatorProject/mutex
-
 /Users/yuvalkasner/Documents/Cplus_projects/simulatorProject/SimManager.h
 unordered_map
 -
@@ -151,6 +145,8 @@ utility
 -
 unordered_map
 /Users/yuvalkasner/Documents/Cplus_projects/simulatorProject/unordered_map
+SimulatorHelper.h
+/Users/yuvalkasner/Documents/Cplus_projects/simulatorProject/SimulatorHelper.h
 
 /Users/yuvalkasner/Documents/Cplus_projects/simulatorProject/main.cpp
 ostream

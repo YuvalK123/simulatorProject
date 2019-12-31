@@ -20,9 +20,7 @@ class SimManager {
  private:
   vector<string> lex;
   unordered_map<string, int> id2InIndex;
-  unordered_map<string, int> id2OutIndex;
   vector<double> inVals;
-  vector<double> outVals;
   unordered_map<string, Command *> commandMap;
   Client *client;
 
@@ -35,7 +33,6 @@ class SimManager {
   static vector<string> split(string str, const string &token);
   void assignValByVec(const vector<string> &vals);
   vector<double>::iterator getInIndex(string str);
-  vector<double>::iterator getOutIndex(string str);
   void sendMsg(const string &msg);
   void setClient(Client *c) { this->client = c; }
 };

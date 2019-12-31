@@ -13,7 +13,7 @@ class ConditionParser : public Command {
   string getArithmetic(string left, string right, const char *arithmetic);
  protected:
   int bracketsCommands(vector<string>::iterator it);
-  bool condition = false;
+  volatile bool condition = false;
   vector<Command *> commands;
  public:
   int setCondition(vector<string>::iterator it);
@@ -49,31 +49,31 @@ int ConditionParser::setCondition(vector<string>::iterator it) {
     } else {
       string left = *(it + (i - 1));
       string right = *(it + (i + 1));
-//      cout<<"condition is:"<<endl<<"left: "<<left<<" op is "<<op<<" right is "<<right<<endl;
       switch (op) {
         case (SMALLER):
+//          cout<<"condition is:"<<endl<<"left: "<<left<<" op is smaller, "<<" right is "<<right<<endl;
           this->condition = helper->getInterpret()->interpret(left)->calculate() <
-              helper->getInterpret()->interpret(left)->calculate();
+              helper->getInterpret()->interpret(right)->calculate();
           break;
         case (BIGGER):
           this->condition = helper->getInterpret()->interpret(left)->calculate() >
-              helper->getInterpret()->interpret(left)->calculate();
+              helper->getInterpret()->interpret(right)->calculate();
           break;
         case (SE):
           this->condition = helper->getInterpret()->interpret(left)->calculate() <=
-              helper->getInterpret()->interpret(left)->calculate();
+              helper->getInterpret()->interpret(right)->calculate();
           break;
         case (BE):
           this->condition = helper->getInterpret()->interpret(left)->calculate() >=
-              helper->getInterpret()->interpret(left)->calculate();
+              helper->getInterpret()->interpret(right)->calculate();
           break;
         case (EQ):
           this->condition = helper->getInterpret()->interpret(left)->calculate() ==
-              helper->getInterpret()->interpret(left)->calculate();
+              helper->getInterpret()->interpret(right)->calculate();
           break;
         case (NE):
           this->condition = helper->getInterpret()->interpret(left)->calculate() !=
-              helper->getInterpret()->interpret(left)->calculate();
+              helper->getInterpret()->interpret(right)->calculate();
           break;
         default:break;
       }

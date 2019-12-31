@@ -98,7 +98,7 @@ Variable &Variable::operator-=(double d) {
   return *variable;
 }
 void Variable::setValueByReference(double *d) {
-  delete this->value;
+//  delete this->value;
   this->value = d;
 
 }
@@ -191,7 +191,7 @@ void Interpreter::setVariables(string s) {
     }
     for (unsigned i = 0; i < name.size(); ++i) {
       if ((name[i] < 'a' || name[i] > 'z') && (name[i] < 'A' || name[i] > 'Z') && (name[i] != '_') &&
-          (name[i] < '1' || name[i] > '9')) {
+          (name[i] < '0' || name[i] > '9')) {
         throw "illegal variable assignment!";
       }
     }
@@ -199,14 +199,19 @@ void Interpreter::setVariables(string s) {
     //variable's value
     str.erase(0, pos + 1);
     string value = str;
-
-    //check that value contains only numbers
-    if (!value.find_first_not_of("0123456789")) {
-      throw "illegal variable assignment!";
+    double val;
+//    check that value is with legal value
+    try {
+      val = interpret(value)->calculate();
     }
+    catch (const char *e) {
+      throw "3 illegal variable assignment!";
+    }
+//    if (!value.find_first_not_of("0123456789")) {
+//    }
 
     //set the current variable
-    double val = stod(value);
+
     auto it = this->variables.find(name);
     if (it != this->variables.end()) {
       it->second->setValueByValue(val);

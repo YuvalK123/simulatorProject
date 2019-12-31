@@ -30,7 +30,7 @@ class Server {
 };
 
 int Server::execute(int port) {
-  int bufferSize = 1024;
+  int bufferSize = 4096;
   int listening = socket(AF_INET, SOCK_STREAM, 0);
   if (listening == -1) {
     close(listening);
@@ -79,12 +79,10 @@ int Server::execute(int port) {
   thread t1(recvMsg, clientSocket, bufferSize);
   t1.detach();
   //while recieving - disp msg
-  cout << "return 2" << endl;
   return 2;
 }
 void Server::recvMsg(int clientSocket, int bufferSize) {
   char buff[bufferSize];
-  cout << "recv" << endl;
   mutex x;
   while (!isDone) {
     const std::lock_guard<std::mutex> lock(x);
@@ -101,10 +99,17 @@ void Server::recvMsg(int clientSocket, int bufferSize) {
     }
     string str = string(buff, 0, byteRecv);
 //    cout << "recieved " << str << endl;
-    vector<string> vec = helper->getManager()->split(str, ",");
+    vector<string> vec = helper->getManager()->split(str, "\n");
+    vec = helper->getManager()->split(vec[0], ",");
     helper->getManager()->assignValByVec(vec);
     std::this_thread::sleep_for(std::chrono::milliseconds(50));
   }
+  //string of 36 values. if not 36 than repeat
+  //for string - \n at end of gush
+  //need to sepereate buffer by \n. if at buffer puts 36+x values - as long as you have \n,
+  // if st.find(\n) != npos, if the \n is at string. find returns size_t that bring place of \n in string from left
+  //if yes - put at size_t st.find(\n) - puts first placements of \n
+  //
   //close
   close(clientSocket);
 }

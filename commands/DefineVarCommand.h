@@ -38,30 +38,46 @@ int DefineVarCommand::execute(vector<string>::iterator it) {
     string sim = sm;
     if (strcmp(side, "<-") == 0) {
       arrow = "<-";
-//      value = *(helper->getManager()->getInIndex(sm));
       helper->getInterpret()->getVars()[ID]->setValueByReference(&(*helper->getManager()->getInIndex(sm)));
     } else { //->
       arrow = "->";
-      *(helper->getManager()->getOutIndex(sm)) = value;
     }
     helper->getInterpret()->getVars()[ID]->setToSim(arrow, sm);
   } else { //=
-    ID = *(it);
+    if (*it != "var") {
+      retVal = 3;
+      ID = *(it);
 //    cout << "id is " << ID << endl;
-    string x = *(it + 2);
-    retVal = 3;
-    string exp = ID + eq + x;
-    cout << "exp is " << exp << " ";
-    helper->getInterpret()->setVariables(exp);
-    arrow = helper->getInterpret()->getVars()[ID]->side;
-    sm = helper->getInterpret()->getVars()[ID]->sim;
-    cout << "arrow is " << arrow << endl;
-    if (arrow == "->") {
-      string msg = ("set ") + (sm) + " " + x;
-      helper->getManager()->sendMsg(msg);
+      string x = *(it + 2);
+      string exp = ID + eq + x;
+      cout << "exp is " << exp << " ";
+      helper->getInterpret()->setVariables(exp);
+      arrow = helper->getInterpret()->getVars()[ID]->side;
+      sm = helper->getInterpret()->getVars()[ID]->sim;
+      cout << "arrow is " << arrow << endl;
+      if (arrow == "->") {
+        string msg = ("set ") + (sm) + " " + x;
+        helper->getManager()->sendMsg(msg);
+      } else {
+        arrow = "0";//new variable with no sim/arrow
+        helper->getInterpret()->getVars()[ID]->setToSim(arrow, "none");
+      }
     } else {
-      arrow = "0";//new variable with no sim/arrow
-      helper->getInterpret()->getVars()[ID]->setToSim(arrow, "none");
+      //there is a new var: var(0) x(1) =(2) y(3)
+      retVal = 4;
+      ID = *(it + 1);
+      double *val = helper->getInterpret()->getVars()[*(it + 3)]->value;
+      string exp = ID + eq + *(it + 3);
+      cout << "exp is " << exp << endl;
+      try {
+        helper->getInterpret()->setVariables(exp);
+        helper->getInterpret()->getVars()[ID]->setToSim("0", "none");
+      }
+      catch (const char *e) {
+        cerr << e;
+        throw e;
+      }
+
     }
   }
   return retVal;
