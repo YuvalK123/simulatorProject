@@ -2,7 +2,7 @@
 // Created by israela on 09/11/2019.
 //
 
-#include "expression.h"
+#include "Expression.h"
 
 //BinaryoOperator Class functons
 //Constructor
@@ -228,6 +228,8 @@ void Interpreter::setVariables(string s) {
 queue<string> Interpreter::shuntingYard(string s) {
   string nums;
   smatch m;
+  int flagUnary = 0;
+  string o;
   //puts in the string the variables values
 //    for (int j = variables.size() - 1; j >= 0; --j) {
   for (auto &it :this->variables) {
@@ -239,45 +241,70 @@ queue<string> Interpreter::shuntingYard(string s) {
 
   for (unsigned i = 0; i < s.size(); ++i) {
 
-    //if is is a number
-    if ((s[i] >= '0' && s[i] <= '9') || s[i] == '.') {
-      nums = nums + s[i];
-      //check if the number is more than one digit
-      if ((i == (s.size() - 1) || (s[i + 1] < '0' || s[i + 1] > '9')) && s[i + 1] != '.') {
-        output.push(nums);
-        nums.clear();
+      //if is is a number
+      if ((s[i] >= '0' && s[i] <= '9') || s[i] == '.') {
+          nums = nums + s[i];
+          //check if the number is more than one digit
+          if ((i == (s.size() - 1) || (s[i + 1] < '0' || s[i + 1] > '9')) && s[i + 1] != '.') {
+              output.push(nums);
+              nums.clear();
+          }
+      } else if (s[i] == '(') {
+          operators.push(s[i]);
+      } else if (s[i] == ')') {
+          while (operators.top() != '(') {
+              //check if the brackets are valid
+              if (operators.size() == 1) {
+                  throw "illegal math exprmainession";
+              }
+              string o;
+              output.push(o + operators.top());
+              operators.pop();
+          }
+          operators.pop();
       }
-    } else if (s[i] == '(') {
-      operators.push(s[i]);
-    } else if (s[i] == ')') {
-      while (operators.top() != '(') {
-        //check if the brackets are valid
-        if (operators.size() == 1) {
-          throw "illegal math exprmainession";
-        }
-        string o;
-        output.push(o + operators.top());
-        operators.pop();
+          //if it is a operator
+      else if (s[i] == '*' || s[i] == '/' || s[i] == '+' || s[i] == '-') {
+          //check for illegal math exprmainession
+          if (s[i] == '*' || s[i] == '/') {
+              if (i == 0) {
+                  throw "illegal math exprmainession";
+              }
+              if (i != 0 && (s[i - 1] == '*' || s[i - 1] == '/' || s[i - 1] == '+' || s[i - 1] == '-')) {
+                  throw "illegal math exprmainession";
+              }
+          }
+          if (s[i] == '+' || s[i] == '-') {
+              if (i != 0 && (s[i - 1] == '+' || s[i - 1] == '-')) {
+                  throw "illegal math exprmainession";
+              }
+          }
+          if (i != 0 && s[i + 1] != '(' && (s[i - 1] == '*' || s[i - 1] == '/')) {
+              flagUnary = 1;
+              output.push("0");
+              if (!isOperator(o + s[i + 1])) {
+                  output.push(o + s[i + 1]);
+                  output.push(o + s[i]);
+                  i++;
+                  //operators.push(s[i]);
+              }
+          } else {
+              while (!operators.empty() && precedence(operators.top()) >= precedence(s[i])) {
+                  string o;
+                  output.push(o + operators.top());
+                  operators.pop();
+                  o.clear();
+              }
+
+              if (i == 0 || s[i - 1] == '(') {
+                  output.push("0");
+              }
+          }
+          if (flagUnary == 0) {
+              operators.push(s[i]);
+          }
       }
-      operators.pop();
-    }
-      //if it is a operator
-    else if (s[i] == '*' || s[i] == '/' || s[i] == '+' || s[i] == '-') {
-      //check for illegal math exprmainession
-      if (i != 0 && (s[i - 1] == '*' || s[i - 1] == '/' || s[i - 1] == '+' || s[i - 1] == '-')) {
-        throw "illegal math exprmainession";
-      }
-      while (!operators.empty() && precedence(operators.top()) >= precedence(s[i])) {
-        string o;
-        output.push(o + operators.top());
-        operators.pop();
-        o.clear();
-      }
-      if (i == 0 || s[i - 1] == '(') {
-        output.push("0");
-      }
-      operators.push(s[i]);
-    }
+
   }
 
   while (!operators.empty()) {
