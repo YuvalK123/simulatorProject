@@ -235,7 +235,7 @@ void SimManager::lexer(ifstream &codeFile) {
                     }
                     codeArray.push_back(">");
                 } else if (currentString[i] == '{' && !flagInBrackets) {
-                    curlyBrackets = 1;
+                    curlyBrackets++;
                     if (i != leftPos) {
                         range = i - leftPos;
                         pushS = currentString.substr(leftPos, range);
@@ -248,7 +248,7 @@ void SimManager::lexer(ifstream &codeFile) {
                     }
                     codeArray.push_back("{");
                 } else if (currentString[i] == '}' && !flagInBrackets) {
-                    curlyBrackets = 0;
+                    curlyBrackets--;
                     if (i != leftPos) {
                         range = i - leftPos;
                         pushS = currentString.substr(leftPos, range);
@@ -301,7 +301,7 @@ void SimManager::lexer(ifstream &codeFile) {
         }
     }
 
-    if(curlyBrackets == 1){
+    if(curlyBrackets > 0){
         throw "curly brackets problem!";
     }
     this->lex = codeArray;
