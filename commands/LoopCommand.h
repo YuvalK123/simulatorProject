@@ -14,16 +14,8 @@ class LoopCommand : public ConditionParser {
 
 int LoopCommand::execute(vector<string>::iterator it) {
   int retValue = 0, tmp = setCondition(it);
-  bool cond = false;
-  while (this->condition) {
-    cond = true;
-    retValue = bracketsCommands(it + tmp);
-    setCondition(it);
-  }
-  cout << "false condition" << endl;
-  retValue += tmp;
-  if (!cond) { //condition doesnt happen
-    cout << "not conds" << endl;
+  if (!this->condition) { //condition doesnt happen
+    retValue = tmp;
     string str = *(it + retValue);
     while (str != "}") {
       retValue++;
@@ -31,6 +23,12 @@ int LoopCommand::execute(vector<string>::iterator it) {
     }
     retValue++;
   }
+  while (this->condition) {
+    retValue = bracketsCommands(it + tmp);
+    setCondition(it);
+  }
+  retValue += tmp;
+
   return retValue;
 }
 

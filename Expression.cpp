@@ -55,6 +55,9 @@ Variable::Variable(std::string n, double v) {
 }
 
 double Variable::calculate() {
+  if ((this->sim != "") && (this->v.size() == 36)) {
+    return this->v[this->index];
+  }
   return *value;
 }
 
@@ -227,16 +230,20 @@ void Interpreter::setVariables(string s) {
 //shuntingYard algorithm
 queue<string> Interpreter::shuntingYard(string s) {
   string nums;
-  smatch m;
+  smatch matches;
   //puts in the string the variables values
 //    for (int j = variables.size() - 1; j >= 0; --j) {
   for (auto &it :this->variables) {
-    regex r(it.second->name);
-    while (regex_search(s, m, r)) {
-      s = regex_replace(s, r, to_string(*it.second->value));
+    regex reg(it.second->name);
+    while (regex_search(s, matches, reg)) {
+      string v = to_string(*it.second->value);
+      if (v.rfind("-", 0) == 0) {
+        v = "(" + v + ")";
+      }
+      s = regex_replace(s, reg, v);
     }
   }
-
+//  cout<<"shunting yard for "<<s<<endl;
   for (unsigned i = 0; i < s.size(); ++i) {
 
     //if is is a number
@@ -307,6 +314,9 @@ int Interpreter::precedence(char &oper) {
       break;
     default:throw "invalid operator";
   }
+}
+bool Interpreter::isVariable(string var) {
+  return this->variables.find(var) != this->variables.end();
 }
 
 

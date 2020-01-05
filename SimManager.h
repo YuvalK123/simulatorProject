@@ -24,6 +24,9 @@ class SimManager {
   unordered_map<string, Command *> commandMap;
   Client *client;
 
+  //funcs
+  unordered_map<string, vector<string>> fucsToList;
+
  public:
   explicit SimManager(unordered_map<string, Command *> command);
   unordered_map<string, Command *> getCommands() { return this->commandMap; }
@@ -32,7 +35,7 @@ class SimManager {
   void parser();
   static vector<string> split(string str, const string &token);
   void assignValByVec(const vector<string> &vals);
-  vector<double>::iterator getInIndex(string str);
+  double *valuePtr(string str);
   void sendMsg(const string &msg);
   void setClient(Client *c) { this->client = c; }
 };

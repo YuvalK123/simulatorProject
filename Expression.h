@@ -12,6 +12,8 @@
 #include <regex>
 #include <utility>
 #include "unordered_map"
+#include <iostream>
+#include "vector"
 using namespace std;
 
 class Expression {
@@ -81,11 +83,14 @@ class Value : public Expression {
 };
 
 //Variable Class
+
 class Variable : public Expression {
  public:
   //variables
   std::string name;
   double *value = new double(0.0);
+  vector<double> v;
+  int index;
   string side;
   string sim;
 
@@ -93,6 +98,10 @@ class Variable : public Expression {
   Variable(string n, double v);
   ~Variable() = default;
   void setValueByReference(double *d);
+  void setVec(vector<double> vec, int ind) {
+    this->v = vec;
+    this->index = ind;
+  }
   void setValueByValue(double d);
   double calculate();
   void setToSim(string sd, string sm) {
@@ -155,6 +164,8 @@ class Interpreter {
   Expression *interpret(string s);
 
   Expression *calcluate(queue<string> posfix);
+
+  bool isVariable(string var);
 
   bool isOperator(string s);
 

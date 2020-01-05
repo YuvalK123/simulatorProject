@@ -39,7 +39,58 @@ string ConditionParser::getArithmetic(string left, string right, const char *ari
 }
 
 int ConditionParser::setCondition(vector<string>::iterator it) {
-  int retValue = 5, i = 1;
+
+  int ret = 1, expStart = 0;
+  string currentStr = *(it + ret), left, right, oper;
+  while (currentStr != "{") {
+    if (retOp(currentStr) != N) {
+      oper = currentStr;
+      expStart = ret;
+      ret++;
+      currentStr = *(it + ret);
+      continue;
+    }
+    if (expStart == 0) {
+      left += currentStr;
+    } else {
+      right += currentStr;
+    }
+    ret++;
+    currentStr = *(it + ret);
+  }
+  ret++;
+  operate op = retOp(oper);
+//  cout << "if " << left << " " << oper << " " << right << endl;
+  switch (op) {
+    case (SMALLER):
+      this->condition = helper->getInterpret()->interpret(left)->calculate() <
+          helper->getInterpret()->interpret(right)->calculate();
+      break;
+    case (BIGGER):
+      this->condition = helper->getInterpret()->interpret(left)->calculate() >
+          helper->getInterpret()->interpret(right)->calculate();
+      break;
+    case (SE):
+      this->condition = helper->getInterpret()->interpret(left)->calculate() <=
+          helper->getInterpret()->interpret(right)->calculate();
+      break;
+    case (BE):
+      this->condition = helper->getInterpret()->interpret(left)->calculate() >=
+          helper->getInterpret()->interpret(right)->calculate();
+      break;
+    case (EQ):
+      this->condition = helper->getInterpret()->interpret(left)->calculate() ==
+          helper->getInterpret()->interpret(right)->calculate();
+      break;
+    case (NE):
+      this->condition = helper->getInterpret()->interpret(left)->calculate() !=
+          helper->getInterpret()->interpret(right)->calculate();
+      break;
+    default:break;
+  }
+  return ret;
+}
+/*
   string str = *(it + i);
   while (str != "{") {
     operate op = retOp(str);
@@ -49,9 +100,9 @@ int ConditionParser::setCondition(vector<string>::iterator it) {
     } else {
       string left = *(it + (i - 1));
       string right = *(it + (i + 1));
+      cout<<"if "<<left<<" "<<str<<" "<< right<<endl;
       switch (op) {
         case (SMALLER):
-//          cout<<"condition is:"<<endl<<"left: "<<left<<" op is smaller, "<<" right is "<<right<<endl;
           this->condition = helper->getInterpret()->interpret(left)->calculate() <
               helper->getInterpret()->interpret(right)->calculate();
           break;
@@ -80,8 +131,9 @@ int ConditionParser::setCondition(vector<string>::iterator it) {
       break;
     }
   }
-  return retValue;
-}
+  cout<<"next is "<<*(it + ret)<<endl;
+  return ret;
+}*/
 
 ConditionParser::operate ConditionParser::retOp(string str) {
   if (str == "<") {
@@ -107,17 +159,24 @@ ConditionParser::operate ConditionParser::retOp(string str) {
 
 int ConditionParser::bracketsCommands(vector<string>::iterator it) {
   string str = *(it);
-  int retValue = 0, ind;
+  int ind = 0;
   while (str != "}") {
     Command *c = helper->getCommandMap()[str];
     if (c != nullptr) {
-      ind = c->execute(it);
-      retValue += ind;
-      it += ind;
+      ind += c->execute(it + ind);
+    } else {
+      c = helper->getCommandMap()["var"];
+      try {
+        ind += c->execute(it + ind);
+      }
+      catch (const char *e) {
+        cerr << e << endl;
+      }
     }
+    str = *(it + ind);
   }
-  retValue++;
-  return retValue;
+  ind++;
+  return ind;
 }
 
 #endif //SIMULATORPROJECT_COMMANDS_CONDITIONPARSER_H_

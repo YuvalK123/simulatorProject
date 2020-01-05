@@ -84,9 +84,10 @@ int Server::execute(int port) {
 void Server::recvMsg(int clientSocket, int bufferSize) {
   char buff[bufferSize];
   mutex x;
+  string str = "";
   while (!isDone) {
     const std::lock_guard<std::mutex> lock(x);
-    memset(buff, 0, bufferSize);//clear buffer
+    memset(buff, 1, bufferSize);//clear buffer
     //wait for msg
     int byteRecv = recv(clientSocket, buff, bufferSize, 0);
     if (byteRecv == -1) {
@@ -97,22 +98,25 @@ void Server::recvMsg(int clientSocket, int bufferSize) {
       cout << "client disconnected" << endl;
       break;
     }
-    string str = string(buff, 0, byteRecv);
+    str += string(buff, 0, byteRecv);
 //    cout << "recieved " << str << endl;
-    vector<string> vec = helper->getManager()->split(str, "\n");
-    vec = helper->getManager()->split(vec[0], ",");
-    helper->getManager()->assignValByVec(vec);
-    std::this_thread::sleep_for(std::chrono::milliseconds(50));
+    vector<string> vec = helper->getManager()->split(str, "\n"), sendVec;
+    for (auto i = vec.size() - 1; i >= 0; i--) {
+      vector<string> tmp = helper->getManager()->split(vec[i], ",");
+      if (tmp.size() == 36) {
+        sendVec = tmp;
+        if (i != vec.size() - 1) {
+          str = vec[vec.size() - 1];
+        }
+        break;
+      }
+    }
+//    vec = helper->getManager()->split(vec[0], ",");
+    if (sendVec.size() == 36) {
+      helper->getManager()->assignValByVec(sendVec);
+    }
   }
-  //string of 36 values. if not 36 than repeat
-  //for string - \n at end of gush
-  //need to sepereate buffer by \n. if at buffer puts 36+x values - as long as you have \n,
-  // if st.find(\n) != npos, if the \n is at string. find returns size_t that bring place of \n in string from left
-  //if yes - put at size_t st.find(\n) - puts first placements of \n
-  //
-  //close
   close(clientSocket);
 }
-
 
 #endif //SIMULATORPROJECT_C__PROJECTS_SIMULATORPROJECT_SERVER_H_

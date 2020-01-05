@@ -13,16 +13,14 @@
 #include "commands/Sleep.h"
 #include "commands/Print.h"
 #include "commands/ForLoop.h"
-#include "SimulatorHelper.h"
+#include "simulatorHelper.h"
 unordered_map<string, Command *> setCommands();
 
 int main(int argc, const char *argv[]) {
   helper = new SimulatorHelper(setCommands());
   helper->getManager()->initVarss();
-//  string s = "3200";
-//  cout<<500 + helper->getInterpret()->interpret(s)->calculate();
   ifstream codeFile;
-  codeFile.open("fly.txt");
+  codeFile.open(argv[1]);
   if (!codeFile.is_open()) {
     cerr << "failed to open from main" << endl;
     return -1;

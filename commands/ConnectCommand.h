@@ -18,9 +18,8 @@ int ConnectCommand::execute(vector<string>::iterator it) {
   int reValue = 3;
   string ip = *(it + 1);
   ip.erase(std::remove(ip.begin(), ip.end(), '"'), ip.end());
-  int port = stoi(*(it + 2));
+  int port = (int) helper->getInterpret()->interpret(*(it + 2))->calculate();
   Client *client = new Client();
-  cout << "ip is " << ip << " port is " << port << endl;
   int trys = client->execute(ip.c_str(), port);
   while (trys < 0) {
     trys = client->execute(ip.c_str(), port);

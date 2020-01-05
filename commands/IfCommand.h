@@ -16,9 +16,8 @@ class IfCommand : public ConditionParser {
 
 int IfCommand::execute(vector<string>::iterator it) {
   int retValue = setCondition(it);
-  it += retValue;
   if (this->condition) {
-    retValue += bracketsCommands(it);
+    retValue += bracketsCommands(it + retValue);
 //    for (Command* command : this->commands){
 //      retValue += command->execute(it + retValue);
 //    }
@@ -32,19 +31,5 @@ int IfCommand::execute(vector<string>::iterator it) {
   }
   return retValue;
 }
-//int IfCommand::bracketsCommands(vector<string>::iterator it) {
-//  string str = *(it);
-//  int retValue = 0, ind;
-//  while (str != "}"){
-//    Command* c = helper->getCommandMap()[str];
-//    if(c != nullptr){
-//      ind = c->execute(it);
-//      retValue += ind;
-//      it += ind;
-//    }
-//  }
-//  retValue++;
-//  return retValue;
-//}
 
 #endif //SIMULATORPROJECT_C__PROJECTS_SIMULATORPROJECT_COMMANDS_IFCOMMAND_H_
