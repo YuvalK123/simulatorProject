@@ -17,7 +17,7 @@ int FuncCommand::execute(vector<string>::iterator it) {
   auto *funcMap = helper->getManager()->getFunctions();
   if (funcMap->find(funcName) != funcMap->end()) { //if the function was asstablished
     returnValue++;//jumps over func name
-    vector<string> params;//for inner vars
+    vector<string> paramsToDel;//for inner vars
     vector<string> code = (*funcMap)[funcName];//gets specific func lexer
     int countParamters = 0;
     vector<string> parameters;
@@ -28,7 +28,7 @@ int FuncCommand::execute(vector<string>::iterator it) {
         vector<string> var = helper->getManager()->split(*(itCode), " ");
         parameters.push_back(var[0]);//var
         parameters.push_back(var[1]);//var name
-        params.push_back(var[1]);
+        paramsToDel.push_back(var[1]);
         itCode++;
 
         //=
@@ -51,6 +51,7 @@ int FuncCommand::execute(vector<string>::iterator it) {
       helper->parser(parameters);
     }
     helper->parser(newCode);
+    helper->getInterpret()->removeVars(paramsToDel);
   } else {//function is now created
     vector<string> code;
     //input parameters
