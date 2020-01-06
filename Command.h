@@ -12,6 +12,7 @@ using namespace std;
 class Command {
  public:
   virtual int execute(vector<string>::iterator it) = 0;
+  virtual ~Command() {}
 };
 
 #endif //SIMULATORPROJECT_COMMANDS_COMMAND_H_

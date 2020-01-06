@@ -7,6 +7,7 @@
 
 #include "Command.h"
 #include "SimulatorHelper.h"
+
 class FuncCommand : public Command {
  public:
   int execute(vector<string>::iterator it);
@@ -15,11 +16,17 @@ int FuncCommand::execute(vector<string>::iterator it) {
   int returnValue = 0, flag = 1;
   string funcName = *(it);
   auto *funcMap = helper->getManager()->getFunctions();
-  if (funcMap->find(funcName) != funcMap->end()) { //if the function was asstablished
+  bool foundFunc = false;
+  for(auto p: (*funcMap)){
+      if(p.first == funcName.c_str()){
+          foundFunc = true;
+          break;
+      }
+  }
+  if (foundFunc) { //if the function was asstablished
     returnValue++;//jumps over func name
     vector<string> paramsToDel;//for inner vars
     vector<string> code = (*funcMap)[funcName];//gets specific func lexer
-    int countParamters = 0;
     vector<string> parameters;
     auto itCode = code.begin();
     while (*(itCode) != "{") {
@@ -44,7 +51,7 @@ int FuncCommand::execute(vector<string>::iterator it) {
       throw "too little vars";
     }
     vector<string> newCode;
-    for (long i = flag; i < code.size() - 1; i++) {
+    for (unsigned long i = flag; i < code.size() - 1; i++) {
       newCode.push_back(code[i]);
     }
     if (!parameters.empty()) {

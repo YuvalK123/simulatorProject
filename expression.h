@@ -78,7 +78,7 @@ class Value : public Expression {
   double Double;
  public:
   Value(double d);
-  ~Value() = default;
+  ~Value() {}
   double calculate();
 };
 
@@ -96,7 +96,7 @@ class Variable : public Expression {
 
   //Constructor & Destructor
   Variable(string n, double v);
-  ~Variable() = default;
+  ~Variable() {}
   void setValueByReference(double *d);
   void setVec(vector<double> vec, int ind) {
     this->v = vec;

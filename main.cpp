@@ -18,7 +18,7 @@ int main(int argc, const char *argv[]) {
   helper = new SimulatorHelper(setCommands());
   helper->getManager()->initNodes();
   ifstream codeFile;
-  codeFile.open(argv[1]);
+  codeFile.open(argv[argc-1]);
   if (!codeFile.is_open()) {
     cerr << "failed to open from main" << endl;
     return -1;

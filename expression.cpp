@@ -49,9 +49,9 @@ double Value::calculate() {
 //Variable Class
 
 //Constructor
-Variable::Variable(std::string n, double v) {
+Variable::Variable(std::string n, double val) {
   name = n;
-  *value = v;
+  *value = val;
 }
 
 double Variable::calculate() {
@@ -319,7 +319,7 @@ bool Interpreter::isVariable(string var) {
   return this->variables.find(var) != this->variables.end();
 }
 void Interpreter::removeVars(vector<string> vars) {
-  auto it = this->variables.begin();
+  //auto it = this->variables.begin();
   for(string v : vars){
     auto p = this->variables.find(v);
     if(p == this->variables.end()){
