@@ -13,12 +13,12 @@
 #include <arpa/inet.h>
 #include <string>
 #include <netinet/in.h>
-#include "commands/Command.h"
+#include "Command.h"
 #include "thread"
 #include "SimulatorHelper.h"
 #include "mutex"
 
-static bool isDone = false;
+static bool isDone = false;//global boolean to signal server we are finished
 class Server {
  private:
 
@@ -71,21 +71,20 @@ int Server::execute(int port) {
   memset(svc, 0, NI_MAXSERV);
   int result = getnameinfo((sockaddr *) &clientSocket, sizeof(clientSocket), host, NI_MAXHOST, svc, NI_MAXSERV, 0);
   if (result) {
-    cout << host << "connected on service" << endl;
+//    cout << host << "connected on service" << endl;
   } else {
     inet_ntop(AF_INET, &client.sin_addr, host, NI_MAXHOST);
     cout << host << "connected on" << ntohs(client.sin_port) << endl;
   }
   thread t1(recvMsg, clientSocket, bufferSize);
-  t1.detach();
-  //while recieving - disp msg
-  return 2;
+  t1.detach();//so server will work in the bg
+  return 2;//succedded to open server
 }
 void Server::recvMsg(int clientSocket, int bufferSize) {
   char buff[bufferSize];
   mutex x;
   string str = "";
-  while (!isDone) {
+  while (!isDone) {//while not finished
     const std::lock_guard<std::mutex> lock(x);
     memset(buff, 1, bufferSize);//clear buffer
     //wait for msg
@@ -99,20 +98,20 @@ void Server::recvMsg(int clientSocket, int bufferSize) {
       break;
     }
     str += string(buff, 0, byteRecv);
-//    cout << "recieved " << str << endl;
+    //seperates to different values got from serv
     vector<string> vec = helper->getManager()->split(str, "\n"), sendVec;
-    for (auto i = vec.size() - 1; i >= 0; i--) {
+    for (auto i = vec.size() - 1; i >= 0; i--) {//get last recieved values
       vector<string> tmp = helper->getManager()->split(vec[i], ",");
       if (tmp.size() == 36) {
         sendVec = tmp;
         if (i != vec.size() - 1) {
-          str = vec[vec.size() - 1];
+          str = vec[vec.size() - 1];//sheerit for next recieve from server
         }
         break;
       }
     }
 //    vec = helper->getManager()->split(vec[0], ",");
-    if (sendVec.size() == 36) {
+    if (sendVec.size() == 36) {//got all values from server
       helper->getManager()->assignValByVec(sendVec);
     }
   }

@@ -7,16 +7,9 @@
 
 #include "Command.h"
 #include "unordered_map"
-#include "../SimulatorHelper.h"
+#include "SimulatorHelper.h"
 
 class DefineVarCommand : public Command {
- private:
-  enum side { None, INPUTVAL, OUTPUTVAL };
-//  SimulatorHelper simHelper;
-//  unordered_map<string,Variable*> vars;
-
-
-//  void outVal(double val);
  public:
   int execute(vector<string>::iterator it) override;
   explicit DefineVarCommand() = default;
@@ -26,7 +19,7 @@ int DefineVarCommand::execute(vector<string>::iterator it) {
 
   //if sim than create var
   //if = than find var in interpreter and change value
-  int retVal;
+  int retVal = 0;
   string id, sm = "sim", arrow, eq = "=", val;
   if (strcmp((it)->c_str(), "var") == 0) {//starts with var((var x ->...) or (var x =...))
     id = *(it + 1);
@@ -48,16 +41,16 @@ int DefineVarCommand::execute(vector<string>::iterator it) {
       retVal = 4;
       val = *(it + 3);
       helper->getInterpret()->setVariables((id + eq + val));
-      helper->getInterpret()->getVars()[id]->setToSim("0", "none");
+      helper->getInterpret()->getVars()[id]->setToSim("0", "none");//0 cuz point at nothing, an none sim
     }
   } else { //its an existing variable.
     id = *(it);
-    //check in interpeter if legal var(declared be4). if not - compilation error
+    //check in interpeter if legal var(declared before). if not - compilation error
     if (!helper->getInterpret()->isVariable(id)) {
       const char *e = string("try to assign to a none existing variable ", id.c_str()).c_str();
       throw e;
     }
-    if (strcmp((it + 1)->c_str(), "=") == 0) {//x = 10
+    if (strcmp((it + 1)->c_str(), "=") == 0) {//type of x = 10
       retVal = 3;
       val = *(it + 2);
       Variable *var = helper->getInterpret()->getVars()[id];
@@ -66,12 +59,15 @@ int DefineVarCommand::execute(vector<string>::iterator it) {
         string msg = ("set ") + (var->sim) + " " + to_string(*var->value);
         helper->getManager()->sendMsg(msg);
       }
-    } else {//x ->sim("..")
+    } else if (strcmp((it + 2)->c_str(), "sim") == 0) {//x ->sim("..")
       retVal = 4;
       arrow = *(it + 1);
       sm = *(it + 3);
       helper->getInterpret()->getVars()[id]->setToSim(arrow, sm);
     }
+  }
+  if (retVal == 0) {
+    throw "was not able to define variable";
   }
   return retVal;
 }

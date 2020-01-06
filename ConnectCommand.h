@@ -6,7 +6,7 @@
 #define SIMULATORPROJECT_CPLUS_PROJECTS_SIMULATORPROJECT_COMMANDS_CONNECTCOMMAND_H_
 
 #include "Command.h"
-#include "../SimulatorHelper.h"
+#include "SimulatorHelper.h"
 
 class ConnectCommand : public Command {
  public:
@@ -15,17 +15,22 @@ class ConnectCommand : public Command {
 };
 
 int ConnectCommand::execute(vector<string>::iterator it) {
-  int reValue = 3;
-  string ip = *(it + 1);
-  ip.erase(std::remove(ip.begin(), ip.end(), '"'), ip.end());
-  int port = (int) helper->getInterpret()->interpret(*(it + 2))->calculate();
-  Client *client = new Client();
-  int trys = client->execute(ip.c_str(), port);
-  while (trys < 0) {
-    trys = client->execute(ip.c_str(), port);
-    std::this_thread::sleep_for(std::chrono::milliseconds(100));
+  int reValue = 3, port;
+  string ip = *(it + 1);//get ip
+  ip.erase(std::remove(ip.begin(), ip.end(), '"'), ip.end());//remove "" from ip
+  try {
+    port = (int) helper->getInterpret()->interpret(*(it + 2))->calculate();//get port
   }
-  helper->getManager()->setClient(client);
+  catch (const char *e) {//problem calculating port.
+    cerr << e << endl;
+    return reValue;
+  }
+  Client *client = new Client();
+  int trys = client->execute(ip.c_str(), port);//trys to connect
+  while (trys < 0) { //while not being able to connect
+    trys = client->execute(ip.c_str(), port);
+  }
+  helper->getManager()->setClient(client);//sets client to simulator
   return reValue;
 }
 

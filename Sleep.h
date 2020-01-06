@@ -15,8 +15,8 @@ class Sleep : public Command {
 
 int Sleep::execute(vector<string>::iterator it) {
   try {
-    int secs = stoi(*(it + 1));
-    std::this_thread::sleep_for(std::chrono::milliseconds(secs));
+    int ms = (int) helper->getInterpret()->interpret(*(it + 1))->calculate();//get time
+    std::this_thread::sleep_for(std::chrono::milliseconds(ms));
     return 2;
   }
   catch (exception &e) {

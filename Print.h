@@ -14,13 +14,17 @@ class Print : public Command {
 
 int Print::execute(vector<string>::iterator it) {
   string content = *(it + 1);
-  if (content.c_str()[0] == '"') {
+  if (content.c_str()[0] == '"') {//if string
     content.erase(std::remove(content.begin(), content.end(), '"'), content.end());
     cout << content << endl;
-  } else {
-    //    double value = helper->getInterpret()->getVars()[content]->calculate();
-    double value = helper->getInterpret()->interpret(content)->calculate();
-    cout << value << endl;
+  } else {//is an arithmethic expression
+    try {
+      double value = helper->getInterpret()->interpret(content)->calculate();
+      cout << value << endl;
+    }
+    catch (const char *e) {
+      cerr << e << endl;
+    }
   }
   return 2;
 }

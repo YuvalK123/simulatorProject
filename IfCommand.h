@@ -17,10 +17,7 @@ class IfCommand : public ConditionParser {
 int IfCommand::execute(vector<string>::iterator it) {
   int retValue = setCondition(it);
   if (this->condition) {
-    retValue += bracketsCommands(it + retValue);
-//    for (Command* command : this->commands){
-//      retValue += command->execute(it + retValue);
-//    }
+    retValue += bracketsCommands(it + retValue);//commit inner condition
   } else { //condition doesnt happen
     string str = *(it + retValue);
     while (str != "}") {

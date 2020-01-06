@@ -24,8 +24,8 @@ int LoopCommand::execute(vector<string>::iterator it) {
     retValue++;
   }
   while (this->condition) {
-    retValue = bracketsCommands(it + tmp);
-    setCondition(it);
+    retValue = bracketsCommands(it + tmp);//commit inner commands
+    setCondition(it);//does condition again
   }
   retValue += tmp;
 
