@@ -17,20 +17,30 @@ int LoopCommand::execute(vector<string>::iterator it) {
   if (!this->condition) { //condition doesnt happen
     retValue = tmp;
     string str = *(it + retValue);
-    while (str != "}") {
+    int counter = 1;
+    while (counter > 0) {
+      if(str == "}"){
+        counter--;
+      }
+      else if(str == "{"){
+        counter++;
+      }
       retValue++;
-      str = *(it + retValue);
+     if(counter > 0){
+        str = *(it + retValue);
+     }
+     
     }
-    retValue++;
   }
-  while (this->condition) {
-    retValue = bracketsCommands(it + tmp);//commit inner commands
-    setCondition(it);//does condition again
+  else if(this->condition) {
+    while (this->condition) {
+      retValue = bracketsCommands(it + tmp);//commit inner commands
+      setCondition(it);//does condition again
+    }
+    retValue += tmp;
   }
-  retValue += tmp;
 
   return retValue;
 }
-
 
 #endif //SIMULATORPROJECT_COMMANDS_LOOPCOMMAND_H_
