@@ -1,10 +1,11 @@
 # about the project:
-the project is creating a specific coding language for the flightGear simulator with specific command, such as Print,Sleep and variables
-the projects uses 2 socket - one server socket to recieve values from simulator using an xml file, and another socket that connect to simulator to send commands
-finished project is at forLinux
+The project is creating a specific coding language for the FlightGear simulator with specific command, such as Print,Sleep and variables
+the projects uses 2 socket - one server socket to recieve values from simulator using an xml file, and another socket that connect to simulator to send commands.
+
+* Finished project is at forLinux
 
 ## Process
-the project is build using the Command pattern tool, and also uses few helping classes.
+The project is build using the Command pattern tool, and also uses few helping classes.
 simulatorManager concenctrates fields that is important for the run of the program.
 Interpreter and expression classes to calculate arithmetic expressions and save variables
 simulatorHelper to save both interpreter and manager, and also parses the lex.
